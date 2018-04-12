@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Hubble&#39;s Blog</title>
+    <link>https://hubinbin91.github.io/categories/tools/</link>
+    <description>Recent content in Tools on Hubble&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 Sep 2017 16:03:27 +0800</lastBuildDate>
+    
+	<atom:link href="https://hubinbin91.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>基于Hugo搭建个人Blog</title>
+      <link>https://hubinbin91.github.io/post/hugo-build/</link>
+      <pubDate>Fri, 15 Sep 2017 16:03:27 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/hugo-build/</guid>
+      <description>前言 hugo和hexo一样，是静态网站生成器，特点是基于Go语言编写，部署高效快速。 安装 下载对应操作系统版本的Hugo安装包： https://github.com/gohugoio/hugo/releases 解压缩或者安</description>
+    </item>
+    
+  </channel>
+</rss>

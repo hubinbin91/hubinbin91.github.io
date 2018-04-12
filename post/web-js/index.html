@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>JavaScript知识点总结 - Hubble&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="hu_binbin" />
+  <meta name="description" content="概念 页面渲染 浏览器渲染引擎开始解析html，根据元素标签构建DOM节点 根据css样式构建渲染树，包括元素的大小、颜色，隐藏的元素不会被构建到" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.37.1" />
+
+
+<link rel="canonical" href="https://hubinbin91.github.io/post/web-js/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="JavaScript知识点总结" />
+<meta property="og:description" content="概念 页面渲染 浏览器渲染引擎开始解析html，根据元素标签构建DOM节点 根据css样式构建渲染树，包括元素的大小、颜色，隐藏的元素不会被构建到" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hubinbin91.github.io/post/web-js/" />
+
+
+
+<meta property="article:published_time" content="2018-03-14T15:21:10&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-03-14T15:21:10&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="JavaScript知识点总结">
+<meta itemprop="description" content="概念 页面渲染 浏览器渲染引擎开始解析html，根据元素标签构建DOM节点 根据css样式构建渲染树，包括元素的大小、颜色，隐藏的元素不会被构建到">
+
+
+<meta itemprop="datePublished" content="2018-03-14T15:21:10&#43;08:00" />
+<meta itemprop="dateModified" content="2018-03-14T15:21:10&#43;08:00" />
+<meta itemprop="wordCount" content="3343">
+
+
+
+<meta itemprop="keywords" content="JavaScript,面试," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JavaScript知识点总结"/>
+<meta name="twitter:description" content="概念 页面渲染 浏览器渲染引擎开始解析html，根据元素标签构建DOM节点 根据css样式构建渲染树，包括元素的大小、颜色，隐藏的元素不会被构建到"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Hu</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Hu</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">JavaScript知识点总结</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-03-14 </span>
+        <div class="post-category">
+            
+              <a href="/categories/javascript/"> JavaScript </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#概念">概念</a>
+<ul>
+<li><a href="#页面渲染">页面渲染</a></li>
+<li><a href="#fouc原理">FOUC原理</a></li>
+<li><a href="#async-defer">async、defer</a></li>
+</ul></li>
+<li><a href="#es5">ES5</a>
+<ul>
+<li><a href="#数据类型">数据类型</a></li>
+<li><a href="#运算符">运算符</a></li>
+<li><a href="#流程控制">流程控制</a></li>
+<li><a href="#函数">函数</a></li>
+<li><a href="#内置对象">内置对象</a></li>
+<li><a href="#玩转javascript-oop">玩转JavaScript OOP</a>
+<ul>
+<li><a href="#闭包">闭包</a></li>
+<li><a href="#执行上下文">执行上下文</a></li>
+<li><a href="#作用域">作用域</a></li>
+<li><a href="#作用域链">作用域链</a></li>
+<li><a href="#this">this</a></li>
+<li><a href="#自由变量">自由变量</a></li>
+<li><a href="#任务队列-事件循环">任务队列、事件循环</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#dom-文档对象模型">DOM(文档对象模型)</a>
+<ul>
+<li><a href="#dom遍历">DOM遍历</a></li>
+<li><a href="#dom操作">DOM操作</a></li>
+<li><a href="#事件对象">事件对象</a></li>
+<li><a href="#绑定">绑定</a></li>
+<li><a href="#冒泡">冒泡</a></li>
+<li><a href="#事件代理-委托">事件代理(委托)</a></li>
+<li><a href="#阻止默认事件">阻止默认事件</a></li>
+</ul></li>
+<li><a href="#bom">BOM</a></li>
+<li><a href="#ajax和跨域">ajax和跨域</a>
+<ul>
+<li><a href="#同源策略-sop">同源策略(SOP)</a></li>
+<li><a href="#跨域的方法">跨域的方法</a>
+<ul>
+<li><a href="#跨源资源共享-cors">跨源资源共享(CORS)</a></li>
+<li><a href="#jsonp">JSONP</a></li>
+<li><a href="#h5-window-postmessage">H5 window.postMessage()</a></li>
+<li><a href="#websocket">webSocket</a></li>
+</ul></li>
+<li><a href="#ajax">ajax</a></li>
+</ul></li>
+<li><a href="#面向对象-对象都是由函数构成的">面向对象(对象都是由函数构成的)</a></li>
+<li><a href="#设计模式">设计模式</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h2 id="概念">概念</h2>
+
+<h3 id="页面渲染">页面渲染</h3>
+
+<ol>
+<li><p>浏览器渲染引擎开始解析html，根据元素标签构建<strong>DOM节点</strong></p></li>
+
+<li><p>根据css样式构建<strong>渲染树</strong>，包括元素的大小、颜色，隐藏的元素不会被构建到该树中。</p></li>
+
+<li><p>根据css样式构建<strong>布局树</strong>，主要是确定元素要显示的位置。</p></li>
+
+<li><p>据前面的信息，绘制渲染树</p></li>
+</ol>
+
+<h3 id="fouc原理">FOUC原理</h3>
+
+<p>用import方法对CSS进行导入,会导致某些页面在下的IE中出现一些奇怪的现象:以无样式显示页面内容的瞬间闪烁,这种现象称之为文档样式短暂失效(Flash of Unstyled Content),简称为FOUC。</p>
+
+<p>其实<strong>原理</strong>很清楚：当样式表晚于结构性html加载，当加载到此样式表时，页面将停止之前的渲染。此样式表被下载和解析后，将重新渲染页面，也就出现了短暂的 花屏现象。</p>
+
+<p><strong>解决方法</strong>：使用link标签将样式表放在文档head中</p>
+
+<h3 id="async-defer">async、defer</h3>
+
+<pre><code>&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+没有 defer 或 async，浏览器会立即加载并执行指定的脚本，
+“立即”指的是在渲染该 script标签之下的文档元素之前，也就是说不等待后续载入的文档元素，读到就加载并执行
+
+&lt;script async src=&quot;script.js&quot;&gt;&lt;/script&gt;
+有 async，加载和渲染后续文档元素的过程将和 script.js 的加载与执行并行进行（异步）
+
+&lt;script defer src=&quot;myscript.js&quot;&gt;&lt;/script&gt;
+有 defer，加载后续文档元素的过程将和 script.js 的加载并行进行（异步）
+但是 script.js 的执行要在所有元素解析完成之后，DOMContentLoaded 事件触发之前完成
+</code></pre>
+
+<h2 id="es5">ES5</h2>
+
+<h3 id="数据类型">数据类型</h3>
+
+<p>基本类型：undefined null boolean string number
+引用类型：object array function (date reg 包装类)</p>
+
+<h3 id="运算符">运算符</h3>
+
+<p>略</p>
+
+<h3 id="流程控制">流程控制</h3>
+
+<p>with(expression) statement将代码的作用域设置到一个特定的对象中</p>
+
+<h3 id="函数">函数</h3>
+
+<p>略</p>
+
+<h3 id="内置对象">内置对象</h3>
+
+<ol>
+<li>数组</li>
+</ol>
+
+<pre><code>检测Array.isArray()
+push()返回修改后数组的长度
+pop()返回移除的项
+shift()返回数组中的第一个
+unshift()返回新数组的长度
+reverse()反转数组项的顺序
+
+array-&gt;string join()
+string-&gt;array split()
+
+</code></pre>
+
+<pre><code>方法一：// 返回要查找的项在数组中的位置，或者在没找到的情况下返回-1
+function deduplicate(arr) {
+	var newArr = [];
+	for(var i=0;i&lt;arr.length;i++) {
+		if(newArr.indexOf(arr[i]) == -1) {
+			newArr.push(arr[i])
+		}
+	}
+	return newArr;
+}
+方法二：
+(arr) =&gt; [...new Set(arr)].sort()
+</code></pre>
+
+<ol>
+<li>Date</li>
+</ol>
+
+<pre><code>getFullYear() // 年;getMonths+1 // 月;getDate() // 日;
+getHours // 小时;getMinutes // 分钟;getSeconds // 秒
+</code></pre>
+
+<ol>
+<li>正则</li>
+</ol>
+
+<pre><code>\d number
+\w number chart _
+var pattern = /^d.css$/;
+pattern.test(str);
+</code></pre>
+
+<ol>
+<li>字符串</li>
+</ol>
+
+<p><code>concat() slice()</code></p>
+
+<ol>
+<li>Math</li>
+</ol>
+
+<p><code>Math.PI Math.SQRT2</code></p>
+
+<h3 id="玩转javascript-oop">玩转JavaScript OOP</h3>
+
+<h4 id="闭包">闭包</h4>
+
+<p>绑定了上下文的函数(函数内部引用的所有变量)||一个函数和声明该函数词法环境的组合</p>
+
+<ul>
+<li><p>管理私有变量和私有方法，将对变量（状态）的变化封装在安全的环境中</p></li>
+
+<li><p>将代码封装成一个闭包形式，等待时机成熟的时候再使用，比如实现柯里化和反柯里化</p></li>
+
+<li><p>需要注意的，由于闭包内的部分资源无法自动释放，容易造成内存泄露</p></li>
+</ul>
+
+<h4 id="执行上下文">执行上下文</h4>
+
+<p>在执行代码之前，设置以下的值</p>
+
+<ul>
+<li><p>设置scope</p></li>
+
+<li><p>设置变量对象</p></li>
+
+<li><p>设置this值</p></li>
+</ul>
+
+<p>关于VO:</p>
+
+<p>1.根据函数的参数，创建并初始化arguments object</p>
+
+<p>2.扫描上下文的<strong>函数声明</strong>: 如果VO中已经有同名函数，那么就进行覆盖</p>
+
+<p>3.扫面上下文的<strong>变量声明</strong>:变量的值初始化为undefined。如果变量的名字已经在变量对象里存在，不进行任何操作</p>
+
+<pre><code>(function() {
+    console.log(typeof name); 		// function
+    console.log(typeof another); 	// undefined
+
+    var name = 'Abby',
+        another = function() {
+            return 'Lucky';
+        };
+
+    function name() {
+        return 'Abby';
+    }
+
+    console.log(typeof name); 		// string
+    console.log(typeof another); 	// function
+}());
+</code></pre>
+
+<h4 id="作用域">作用域</h4>
+
+<p>在创建时就确定的，类似&rdquo;地盘&rdquo;的抽象概念。用于隔离变量，不同作用域下同名变量不会有冲突</p>
+
+<h4 id="作用域链">作用域链</h4>
+
+<p>保证执行环境里访问变量和函数顺序，由内到外，向上访问</p>
+
+<h4 id="this">this</h4>
+
+<p>this指向调用的对象</p>
+
+<ul>
+<li><p>作为普通函数被调用</p></li>
+
+<li><p>作为对象的属性被调用</p></li>
+
+<li><p>作为构造函数被调用</p></li>
+
+<li><p>作为 call/apply/bind 方法的调用</p></li>
+
+<li><p>严格模式undefined</p></li>
+</ul>
+
+<h4 id="自由变量">自由变量</h4>
+
+<p>在A作用域中使用的变量x，却没有在A作用域中声明(即在其他作用域中声明的)，对于A作用域来说，就是一个自由变量</p>
+
+<h4 id="任务队列-事件循环">任务队列、事件循环</h4>
+
+<p>JS中事件分为同步任务和异步任务，同步任务放到执行栈，异步任务放到任务队列，等执行栈中执行完成，再去执行任务队列中事件</p>
+
+<p>在对调用堆栈中的任务处理完前，其他任务都等候。碰到异步任务是，浏览器会交给其他模块处理，处理完后把回调放入到相应的任务队列中，等调用栈中任务处理完时，再去执行任务队列(宏任务和微任务)</p>
+
+<h2 id="dom-文档对象模型">DOM(文档对象模型)</h2>
+
+<h3 id="dom遍历">DOM遍历</h3>
+
+<p>getElementById().previousSibling()</p>
+
+<h3 id="dom操作">DOM操作</h3>
+
+<pre><code>document.write('&lt;p&gt;这是一个段落！&lt;/p&gt;')
+createElement('p')
+appendChild()
+createTextNode()
+insertBefore()
+replaceChiid()
+</code></pre>
+
+<p>元素实际大小</p>
+
+<pre><code>.clientWidth(include padding)
+.offsetWidth(include border)
+</code></pre>
+
+<h3 id="事件对象">事件对象</h3>
+
+<pre><code>input.onclick = function(event) {
+	var e = event || window.event;
+}
+</code></pre>
+
+<h3 id="绑定">绑定</h3>
+
+<p>事件模型-&gt;内联模型、脚本模型、DOM2模型
+w3c：
+事件名、函数、冒泡或捕获的布尔值(true表示捕获， false表示冒泡)
+window.addEventListener(parm1,parm2,parm3)
+IE：
+attachEvent() detachEvent()</p>
+
+<h3 id="冒泡">冒泡</h3>
+
+<p>某个元素的事件被触发后，如果父元素有相同的事件，那么该事件会逐级向上传播，触发上级的事件</p>
+
+<p>阻止冒泡：</p>
+
+<pre><code>function stopPro(ev) {
+	var e = ev || window.event;
+	window.event ? e.cancelBubble = true : e.stopPropagation()
+}
+</code></pre>
+
+<blockquote>
+<p>1.IE不支持捕获，只支持冒泡；</p>
+
+<p>2.IE添加事件不能屏蔽重复的函数；</p>
+
+<p>3.IE中的this指向的是window而不是DOM对象</p>
+</blockquote>
+
+<h3 id="事件代理-委托">事件代理(委托)</h3>
+
+<p>就是将子元素的事件通过冒泡的形式交由父元素来执行</p>
+
+<pre><code>var ul = document.getElementById('parentUl');  
+ul.onclick=function (event) {  
+  var e = event||window.event,  
+          source = e.target || e.srcElement;
+  //target表示在事件冒泡中触发事件的源元素，在IE中是srcElement  
+    if(source.nodeName.toLowerCase() == &quot;li&quot;){   //判断只有li触发的才会输出内容  
+        alert(source.innerHTML);  
+    }  
+    stopPropagation(e);                           //阻止继续冒泡  
+};  
+function addElement() {  
+    var li = document.createElement('li');  
+    li.innerHTML=&quot;我是新孩子&quot;;  
+    ul.appendChild(li);  
+}
+</code></pre>
+
+<h3 id="阻止默认事件">阻止默认事件</h3>
+
+<p>1.事件函数返回false</p>
+
+<p>2.evt.preventDefault()</p>
+
+<p>3.window.event.returnValue = false</p>
+
+<h2 id="bom">BOM</h2>
+
+<p>localStorage(H5)、cookie、sessionStorage</p>
+
+<ul>
+<li><p>cookie 通过网络请求将数据存储在服务器少量数据</p></li>
+
+<li><p>webStorage数据完全存储在客户端，5M</p></li>
+
+<li><p>localStorage浏览器关闭依然存储，用于同源窗口</p></li>
+
+<li><p>sessionStorage存储在窗口对象中，窗口消失，数据丢失，刷新不丢失</p></li>
+</ul>
+
+<p>|成员名|参数|描述|
+|&ndash;|&ndash;|&ndash;|
+|length|属性|获取存储数据的条数|
+|key(n)|n索引值|根据索引返回|
+|getItem(key)|键名|获取|
+|setItem(key,value)|键值|设置|
+|removeItem(key)|键名|删除|
+|claer()|无|清空|</p>
+
+<h2 id="ajax和跨域">ajax和跨域</h2>
+
+<h3 id="同源策略-sop">同源策略(SOP)</h3>
+
+<p>请求url的<strong>协议</strong>、<strong>域名</strong>、<strong>端口</strong>三者必须和当前地址相同</p>
+
+<h3 id="跨域的方法">跨域的方法</h3>
+
+<h4 id="跨源资源共享-cors">跨源资源共享(CORS)</h4>
+
+<p>使用自定义的HTTP头部让浏览器与服务器进行沟通。服务器端：在响应报头添加Access-Control-Allow-Origin标签，从而允许指定域访问当前
+IE中实现是xdr，其他xhr</p>
+
+<h4 id="jsonp">JSONP</h4>
+
+<p>基于<code>&lt;script&gt;</code>标签没有跨域的限制，在需要和第三方通讯时，在本地动态创建一个<code>&lt;script&gt;</code>标签，将地址指向需要通讯的第三方，并提供一个回调函数接收数据。第三方调用相应的回调函数，同时将封装的响应json数据传入。浏览器执行回调，就可以在回调中处理传入的数据</p>
+
+<p>以下案例展示了jsonp实现的全过程：调用的url中传递了一个code参数，告诉服务器我要查的是CA1998次航班的信息，而callback参数则告诉服务器，我的本地回调函数叫做flightHandler，所以请把查询结果传入这个函数中进行调用。OK，服务器很聪明，这个叫做flightResult.aspx的页面生成了一段这样的代码提供给jsonp.html</p>
+
+<p><strong>客户端</strong></p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    // 得到航班信息查询结果后的回调函数
+    var flightHandler = function(data){
+        alert('你查询的航班结果是：票价 ' + data.price + ' 元，' + '余票 ' + data.tickets + ' 张。');
+    };
+    // 提供jsonp服务的url地址（不管是什么类型的地址，最终生成的返回值都是一段javascript代码）
+    var url = &quot;http://flightQuery.com/jsonp/flightResult.aspx?code=CA1998&amp;callback=flightHandler&quot;;
+    // 创建script标签，设置其属性
+    var script = document.createElement('script');
+    script.setAttribute('src', url);
+    // 把script标签加入head，此时调用开始
+    document.getElementsByTagName('head')[0].appendChild(script); 
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>服务端</strong></p>
+
+<pre><code class="language-js">flightHandler({
+    &quot;code&quot;: &quot;CA1998&quot;,
+    &quot;price&quot;: 1780,
+    &quot;tickets&quot;: 5
+});
+</code></pre>
+
+<h4 id="h5-window-postmessage">H5 window.postMessage()</h4>
+
+<h4 id="websocket">webSocket</h4>
+
+<p>原理：会有一个HTTP请求发出，取得服务器响应后，会从HTTP协议交换为web sockt协议。</p>
+
+<pre><code class="language-js">var socket = new WebSockt('ws://www.baidu.com');//http-&gt;ws; https-&gt;wss
+socket.send('hello WebSockt');
+socket.onmessage = function(event){
+    var data = event.data;
+}
+</code></pre>
+
+<h3 id="ajax">ajax</h3>
+
+<p>(1) 创建XMLHttpRequest对象,也就是创建一个异步调用对象.</p>
+
+<p>(2) 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.</p>
+
+<p>(3) 设置响应HTTP请求状态变化的函数.</p>
+
+<p>(4) 发送HTTP请求.</p>
+
+<p>(5) 获取异步调用返回的数据.</p>
+
+<p>(6) 使用JavaScript和DOM实现局部刷新.</p>
+
+<pre><code class="language-js">var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+	if(xhr.readyState == 4) {
+		if(xhr.status == 200 || xhr.status == 304) {
+			console.log(xhr.responseText)
+		} else {
+			console.log(&quot;request is unsuccessful&quot;)
+		}
+	}
+}
+xhr.open('get',url,true);
+xhr.send(null);
+</code></pre>
+
+<h2 id="面向对象-对象都是由函数构成的">面向对象(对象都是由函数构成的)</h2>
+
+<ul>
+<li>构造函数</li>
+<li>原型、原型链</li>
+<li>继承</li>
+</ul>
+
+<h2 id="设计模式">设计模式</h2>
+
+<ul>
+<li>构造模式</li>
+</ul>
+
+<pre><code>function Construct() {
+    this.a = a;
+    this.b = b;
+    this.sayHi = function () {
+        return 'hello'
+    }
+}
+</code></pre>
+
+<ul>
+<li>单例模式</li>
+</ul>
+
+<p>保证一个类仅有一个实例，并且提供一个访问它的全局访问点</p>
+
+<ul>
+<li>发布订阅模式</li>
+</ul>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">hu_binbin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-03-14</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/javascript/">JavaScript</a>
+          
+          <a href="/tags/%E9%9D%A2%E8%AF%95/">面试</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/web-es6/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Web ES6</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/web-html/">
+            <span class="next-text nav-default">Web-HTML</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:hu_binbin@outlook.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://www.twitter.com/hu_binbin" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://www.facebook.com/hu_binbin" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://github.com/hubinbin91" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">hu_binbin</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

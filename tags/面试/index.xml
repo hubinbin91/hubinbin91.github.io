@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面试 on Hubble&#39;s Blog</title>
+    <link>https://hubinbin91.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
+    <description>Recent content in 面试 on Hubble&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 14 Mar 2018 15:21:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://hubinbin91.github.io/tags/%E9%9D%A2%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JavaScript知识点总结</title>
+      <link>https://hubinbin91.github.io/post/web-js/</link>
+      <pubDate>Wed, 14 Mar 2018 15:21:10 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-js/</guid>
+      <description>概念 页面渲染 浏览器渲染引擎开始解析html，根据元素标签构建DOM节点 根据css样式构建渲染树，包括元素的大小、颜色，隐藏的元素不会被构建到</description>
+    </item>
+    
+    <item>
+      <title>Web-START</title>
+      <link>https://hubinbin91.github.io/post/web-start/</link>
+      <pubDate>Sat, 10 Mar 2018 16:54:17 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-start/</guid>
+      <description>从url输入到页面展示 应用层DNS解析域名：客户端先检查本地是否有对应的IP地址，若找到则返回响应的IP地址。若没找到则请求上级DNS服务器</description>
+    </item>
+    
+  </channel>
+</rss>
