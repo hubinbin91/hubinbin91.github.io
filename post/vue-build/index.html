@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Vue爬坑 - Hubble&#39;s Blog</title>
+  <title>Web Vue - Hubble&#39;s Blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="hu_binbin" />
-  <meta name="description" content="vue-cli搭建项目 一、安装相关依赖 node.js git 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试 验证安装成功vue" />
+  <meta name="description" content="vue-cli搭建项目 一、安装相关依赖 Git和Node.js 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -49,8 +49,8 @@
 
 
 
-<meta property="og:title" content="Vue爬坑" />
-<meta property="og:description" content="vue-cli搭建项目 一、安装相关依赖 node.js git 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试 验证安装成功vue" />
+<meta property="og:title" content="Web Vue" />
+<meta property="og:description" content="vue-cli搭建项目 一、安装相关依赖 Git和Node.js 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://hubinbin91.github.io/post/vue-build/" />
 
@@ -70,20 +70,20 @@
 
 
 
-<meta itemprop="name" content="Vue爬坑">
-<meta itemprop="description" content="vue-cli搭建项目 一、安装相关依赖 node.js git 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试 验证安装成功vue">
+<meta itemprop="name" content="Web Vue">
+<meta itemprop="description" content="vue-cli搭建项目 一、安装相关依赖 Git和Node.js 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试">
 
 
 <meta itemprop="datePublished" content="2018-03-29T10:10:46&#43;08:00" />
 <meta itemprop="dateModified" content="2018-03-29T10:10:46&#43;08:00" />
-<meta itemprop="wordCount" content="667">
+<meta itemprop="wordCount" content="681">
 
 
 
 <meta itemprop="keywords" content="Web,Vue," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Vue爬坑"/>
-<meta name="twitter:description" content="vue-cli搭建项目 一、安装相关依赖 node.js git 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试 验证安装成功vue"/>
+<meta name="twitter:title" content="Web Vue"/>
+<meta name="twitter:description" content="vue-cli搭建项目 一、安装相关依赖 Git和Node.js 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -146,7 +146,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Vue爬坑</h1>
+      <h1 class="post-title">Web Vue</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2018-03-29 </span>
@@ -197,11 +197,7 @@
 
 <h2 id="一-安装相关依赖">一、安装相关依赖</h2>
 
-<ul>
-<li><p>node.js</p></li>
-
-<li><p>git</p></li>
-</ul>
+<p>Git和Node.js</p>
 
 <h2 id="二-安装vue-cli">二、安装vue-cli</h2>
 
@@ -217,9 +213,7 @@
 <pre><code class="language-bash">vue init webpack Vue-project 
 </code></pre>
 
-<p>webpack为模板的名称，查看更多的模板(<a href="https://github.com/vuejs-templates">https://github.com/vuejs-templates</a>)</p>
-
-<p>Vue-project为项目的名称</p>
+<p><code>webpack</code>为模板的名称，查看更多的模板(<a href="https://github.com/vuejs-templates">https://github.com/vuejs-templates</a>) <code>Vue-project</code>为项目的名称</p>
 
 <h2 id="四-设置启动">四、设置启动</h2>
 
@@ -242,11 +236,23 @@ npm run build --report
 
 <p>父组件调用子组件时，使用v-bind将logo绑定传递</p>
 
-<p><img src="https://hubinbin91.github.io/img/vue-build/11.png" alt="tu" /></p>
+
+<figure class="center">
+    
+        <img src="/img/vue-build/1-1.png" />
+    
+    
+    <figcaption>
+        <h4>子组件部分</h4>
+        
+    </figcaption>
+    
+</figure>
+
 
 <p>子组件在props中添加元素后，不需要在data中再添加变量了</p>
 
-<p><img src="https://hubinbin91.github.io/img/vue-build/22.png" alt="sc" /></p>
+<p><img src="https://hubinbin91.github.io/img/vue-build/22.png" alt="1-2" /></p>
 
 <h2 id="二-子组件向父组件传递数据">二、子组件向父组件传递数据</h2>
 

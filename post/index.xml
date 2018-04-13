@@ -21,12 +21,12 @@
     </item>
     
     <item>
-      <title>Vue爬坑</title>
+      <title>Web Vue</title>
       <link>http://hubinbin91.github.io/post/vue-build/</link>
       <pubDate>Thu, 29 Mar 2018 10:10:46 +0800</pubDate>
       
       <guid>http://hubinbin91.github.io/post/vue-build/</guid>
-      <description>vue-cli搭建项目 一、安装相关依赖 node.js git 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试 验证安装成功vue</description>
+      <description>vue-cli搭建项目 一、安装相关依赖 Git和Node.js 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试</description>
     </item>
     
     <item>
