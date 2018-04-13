@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-03-10T16:54:17&#43;08:00" />
 <meta itemprop="dateModified" content="2018-03-10T16:54:17&#43;08:00" />
-<meta itemprop="wordCount" content="1344">
+<meta itemprop="wordCount" content="1376">
 
 
 
@@ -279,13 +279,23 @@ $ git config --global user.email &quot;zhangsan@qq.com&quot;
 
 <h2 id="工作区和版本库">工作区和版本库</h2>
 
-<p><img src="https://hubinbin91.github.io/img/web-start/0.jpg" alt="Repository" /></p>
-
 <p>工作区有一个隐藏目录<code>.git</code>是Git的版本库。Git的版本库里存了很多东西，其中最重要的就是称为<code>stage</code>的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code></p>
 
 <h2 id="撤销修改">撤销修改</h2>
 
-<p><img src="https://hubinbin91.github.io/img/web-start/1.png" alt="git仓库中主要的三个区" /></p>
+
+<figure class="center">
+    
+        <img src="/img/web-start/1-1.png" />
+    
+    
+    <figcaption>
+        <h4>git仓库中主要的三个区</h4>
+        
+    </figcaption>
+    
+</figure>
+
 
 <p>1.<code>git diff</code>是工作区和暂存区的比较</p>
 
@@ -306,25 +316,85 @@ $ git config --global user.email &quot;zhangsan@qq.com&quot;
 
 <p><strong>注：<code>dev</code>为分支名称</strong></p>
 
-<p><img src="https://hubinbin91.github.io/img/web-start/2.png" alt="创建分支" /></p>
+
+<figure class="center">
+    
+        <img src="/img/web-start/1-2.png" />
+    
+    
+    <figcaption>
+        <h4>创建分支</h4>
+        
+    </figcaption>
+    
+</figure>
+
 
 <p>使用<code>git branch</code>查看当前分支</p>
 
-<p><img src="https://hubinbin91.github.io/img/web-start/3.png" alt="分支提交" /></p>
+
+<figure class="center">
+    
+        <img src="/img/web-start/1-3.png" />
+    
+    
+    <figcaption>
+        <h4>分支提交</h4>
+        
+    </figcaption>
+    
+</figure>
+
 
 <p>使用<code>git checkout master</code>切换会主分支</p>
 
-<p><img src="https://hubinbin91.github.io/img/web-start/4.png" alt="切换主支" /></p>
+
+<figure class="center">
+    
+        <img src="/img/web-start/1-4.png" />
+    
+    
+    <figcaption>
+        <h4>切换主支</h4>
+        
+    </figcaption>
+    
+</figure>
+
 
 <p>使用<code>git merge dev</code>合并分支，使用<code>git branch -d dev</code>删除合并的分支</p>
 
-<p><img src="https://hubinbin91.github.io/img/web-start/5.png" alt="合并分支" /></p>
+
+<figure class="center">
+    
+        <img src="/img/web-start/1-5.png" />
+    
+    
+    <figcaption>
+        <h4>合并分支</h4>
+        
+    </figcaption>
+    
+</figure>
+
 
 <p>使用<code>git log --graph</code>查看分支合并图</p>
 
 <p>分支使用策略：</p>
 
-<p><img src="https://hubinbin91.github.io/img/web-start/6.png" alt="分支策略" /></p>
+
+<figure class="center">
+    
+        <img src="/img/web-start/1-6.png" />
+    
+    
+    <figcaption>
+        <h4>分支策略</h4>
+        
+    </figcaption>
+    
+</figure>
+
 
 <p>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并;
 而默认<code>fast forward</code>合并就看不出来曾经做过合并</p>
@@ -357,18 +427,7 @@ $ git config --global user.email &quot;zhangsan@qq.com&quot;
     </div>
 
     
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">hu_binbin</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">2018-03-10</span>
-  </p>
-  
-  
-</div>
+    
 
     
     
@@ -391,7 +450,7 @@ $ git config --global user.email &quot;zhangsan@qq.com&quot;
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/hugo-build/">
+          <a class="next" href="/post/web-hugo/">
             <span class="next-text nav-default">基于Hugo搭建个人Blog</span>
             <span class="prev-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
@@ -412,9 +471,8 @@ $ git config --global user.email &quot;zhangsan@qq.com&quot;
       <div class="social-links">
       <a href="mailto:hu_binbin@outlook.com" class="iconfont icon-email" title="email"></a>
       <a href="http://www.twitter.com/hu_binbin" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="http://www.facebook.com/hu_binbin" class="iconfont icon-facebook" title="facebook"></a>
       <a href="https://github.com/hubinbin91" class="iconfont icon-github" title="github"></a>
-      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://weibo.com/hu_binbin" class="iconfont icon-weibo" title="weibo"></a>
 </div>
 
 <div class="copyright">
@@ -451,6 +509,14 @@ $ git config --global user.email &quot;zhangsan@qq.com&quot;
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 <script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
 

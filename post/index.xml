@@ -22,20 +22,20 @@
     
     <item>
       <title>Web Vue</title>
-      <link>http://hubinbin91.github.io/post/vue-build/</link>
+      <link>http://hubinbin91.github.io/post/web-vue/</link>
       <pubDate>Thu, 29 Mar 2018 10:10:46 +0800</pubDate>
       
-      <guid>http://hubinbin91.github.io/post/vue-build/</guid>
+      <guid>http://hubinbin91.github.io/post/web-vue/</guid>
       <description>vue-cli搭建项目 一、安装相关依赖 Git和Node.js 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试</description>
     </item>
     
     <item>
-      <title>Web H5c3</title>
+      <title>Web H5C3</title>
       <link>http://hubinbin91.github.io/post/web-h5c3/</link>
       <pubDate>Fri, 16 Mar 2018 16:54:41 +0800</pubDate>
       
       <guid>http://hubinbin91.github.io/post/web-h5c3/</guid>
-      <description>html5 标签 newwork CSS3 背景、边框、阴影 渐变、动画 Flex布局 容器 父容器可以统一设置子容器的排列方式，子容器也可以单独设置自身的排列方式，如果两者同时设置</description>
+      <description>html5 标签 newwork CSS3 背景、边框、阴影 渐变、动画 Flex布局 flex基本概念 容器 父容器可以统一设置子容器的排列方式，子容器也可以单独设置自身的排列方式，</description>
     </item>
     
     <item>
@@ -76,10 +76,10 @@
     
     <item>
       <title>基于Hugo搭建个人Blog</title>
-      <link>http://hubinbin91.github.io/post/hugo-build/</link>
+      <link>http://hubinbin91.github.io/post/web-hugo/</link>
       <pubDate>Fri, 15 Sep 2017 16:03:27 +0800</pubDate>
       
-      <guid>http://hubinbin91.github.io/post/hugo-build/</guid>
+      <guid>http://hubinbin91.github.io/post/web-hugo/</guid>
       <description>前言 hugo和hexo一样，是静态网站生成器，特点是基于Go语言编写，部署高效快速。 安装 下载对应操作系统版本的Hugo安装包： https://github.com/gohugoio/hugo/releases 解压缩或者安</description>
     </item>
     
@@ -91,36 +91,6 @@
       <guid>http://hubinbin91.github.io/post/english-preview/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>Shortcodes</title>
-      <link>http://hubinbin91.github.io/post/shortcodes/</link>
-      <pubDate>Sun, 30 Aug 2015 16:01:23 +0800</pubDate>
-      
-      <guid>http://hubinbin91.github.io/post/shortcodes/</guid>
-      <description>&lt;h1 id=&#34;center-right-left&#34;&gt;center, right, left&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;## default
-![img](/path/to/img.gif &amp;quot;img&amp;quot;)
-
-{{% center %}}
-## center
-![img](/path/to/img.gif &amp;quot;img&amp;quot;)
-{{% /center %}}
-
-{{% right %}}
-## right
-![img](/path/to/img.gif &amp;quot;img&amp;quot;)
-{{% /right %}}
-
-{{% left %}}
-## left
-![img](/path/to/img.gif &amp;quot;img&amp;quot;)
-{{% /left %}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -153,51 +123,6 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       
       <guid>http://hubinbin91.github.io/post/chinese-preview/</guid>
       <description>《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。 第一段：贵妃受宠爱 汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。 天生丽质难</description>
-    </item>
-    
-    <item>
-      <title>JS Flowchart Diagrams</title>
-      <link>http://hubinbin91.github.io/post/js-flowchart-diagrams/</link>
-      <pubDate>Wed, 04 Mar 2015 21:57:50 +0800</pubDate>
-      
-      <guid>http://hubinbin91.github.io/post/js-flowchart-diagrams/</guid>
-      <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-flowchart&#34;&gt;st=&amp;gt;start: Start|past:&amp;gt;http://www.google.com[blank]
-e=&amp;gt;end: End:&amp;gt;http://www.google.com
-op1=&amp;gt;operation: My Operation|past
-op2=&amp;gt;operation: Stuff|current
-sub1=&amp;gt;subroutine: My Subroutine|invalid
-cond=&amp;gt;condition: Yes
-or No?|approved:&amp;gt;http://www.google.com
-c2=&amp;gt;condition: Good idea|rejected
-io=&amp;gt;inputoutput: catch something...|request
-
-st-&amp;gt;op1(right)-&amp;gt;cond
-cond(yes, right)-&amp;gt;c2
-cond(no)-&amp;gt;sub1(left)-&amp;gt;op1
-c2(yes)-&amp;gt;io-&amp;gt;e
-c2(no)-&amp;gt;op2-&amp;gt;e
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>JS Sequence Diagrams</title>
-      <link>http://hubinbin91.github.io/post/js-sequence-diagrams/</link>
-      <pubDate>Wed, 04 Mar 2015 21:57:45 +0800</pubDate>
-      
-      <guid>http://hubinbin91.github.io/post/js-sequence-diagrams/</guid>
-      <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sequence&#34;&gt;Andrew-&amp;gt;China: Says Hello
-Note right of China: China thinks\nabout it
-China--&amp;gt;Andrew: How are you?
-Andrew-&amp;gt;&amp;gt;China: I am good thanks!
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

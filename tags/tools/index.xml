@@ -13,10 +13,10 @@
     
     <item>
       <title>基于Hugo搭建个人Blog</title>
-      <link>http://hubinbin91.github.io/post/hugo-build/</link>
+      <link>http://hubinbin91.github.io/post/web-hugo/</link>
       <pubDate>Fri, 15 Sep 2017 16:03:27 +0800</pubDate>
       
-      <guid>http://hubinbin91.github.io/post/hugo-build/</guid>
+      <guid>http://hubinbin91.github.io/post/web-hugo/</guid>
       <description>前言 hugo和hexo一样，是静态网站生成器，特点是基于Go语言编写，部署高效快速。 安装 下载对应操作系统版本的Hugo安装包： https://github.com/gohugoio/hugo/releases 解压缩或者安</description>
     </item>
     

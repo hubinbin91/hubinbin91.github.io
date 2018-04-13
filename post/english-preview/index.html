@@ -1346,21 +1346,7 @@ $ vi themes/zafta/layouts/_default/single.html
     </div>
 
     
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">Michael Henderson</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">2017-08-31</span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">License</span>
-    <span class="item-content"><a href="https://github.com/gohugoio/hugoBasicExample" rel="noopener" target="_blank">See origin</a></span>
-  </p>
-</div>
+    
 
     
     
@@ -1379,14 +1365,14 @@ $ vi themes/zafta/layouts/_default/single.html
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/hugo-build/">
+          <a class="prev" href="/post/web-hugo/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">基于Hugo搭建个人Blog</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/shortcodes/">
-            <span class="next-text nav-default">Shortcodes</span>
+          <a class="next" href="/post/syntax-highlighting/">
+            <span class="next-text nav-default">Syntax Highlighting</span>
             <span class="prev-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -1406,9 +1392,8 @@ $ vi themes/zafta/layouts/_default/single.html
       <div class="social-links">
       <a href="mailto:hu_binbin@outlook.com" class="iconfont icon-email" title="email"></a>
       <a href="http://www.twitter.com/hu_binbin" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="http://www.facebook.com/hu_binbin" class="iconfont icon-facebook" title="facebook"></a>
       <a href="https://github.com/hubinbin91" class="iconfont icon-github" title="github"></a>
-      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://weibo.com/hu_binbin" class="iconfont icon-weibo" title="weibo"></a>
 </div>
 
 <div class="copyright">
@@ -1445,6 +1430,14 @@ $ vi themes/zafta/layouts/_default/single.html
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 <script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
 

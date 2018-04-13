@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-03-14T15:21:10&#43;08:00" />
 <meta itemprop="dateModified" content="2018-03-14T15:21:10&#43;08:00" />
-<meta itemprop="wordCount" content="3343">
+<meta itemprop="wordCount" content="3288">
 
 
 
@@ -249,16 +249,16 @@
 
 <h3 id="async-defer">async、defer</h3>
 
-<pre><code>&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
-没有 defer 或 async，浏览器会立即加载并执行指定的脚本，
-“立即”指的是在渲染该 script标签之下的文档元素之前，也就是说不等待后续载入的文档元素，读到就加载并执行
+<pre><code class="language-html">&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;!-- 没有 defer 或 async，浏览器会立即加载并执行指定的脚本， --&gt;
+&lt;!-- “立即”指的是在渲染该 script标签之下的文档元素之前，也就是说不等待后续载入的文档元素，读到就加载并执行 --&gt;
 
 &lt;script async src=&quot;script.js&quot;&gt;&lt;/script&gt;
-有 async，加载和渲染后续文档元素的过程将和 script.js 的加载与执行并行进行（异步）
+&lt;!-- 有 async，加载和渲染后续文档元素的过程将和 script.js 的加载与执行并行进行（异步） --&gt;
 
 &lt;script defer src=&quot;myscript.js&quot;&gt;&lt;/script&gt;
-有 defer，加载后续文档元素的过程将和 script.js 的加载并行进行（异步）
-但是 script.js 的执行要在所有元素解析完成之后，DOMContentLoaded 事件触发之前完成
+&lt;!-- 有 defer，加载后续文档元素的过程将和 script.js 的加载并行进行（异步） --&gt;
+&lt;!-- 但是 script.js 的执行要在所有元素解析完成之后，DOMContentLoaded 事件触发之前完成 --&gt;
 </code></pre>
 
 <h2 id="es5">ES5</h2>
@@ -286,29 +286,35 @@
 <li>数组</li>
 </ol>
 
-<pre><code>检测Array.isArray()
-push()返回修改后数组的长度
-pop()返回移除的项
-shift()返回数组中的第一个
-unshift()返回新数组的长度
-reverse()反转数组项的顺序
+<blockquote>
+<p>检测<code>Array.isArray()</code></p>
 
-array-&gt;string join()
-string-&gt;array split()
+<p><code>push()</code>返回修改后数组的长度</p>
 
-</code></pre>
+<p><code>pop()</code>返回移除的项</p>
 
-<pre><code>方法一：// 返回要查找的项在数组中的位置，或者在没找到的情况下返回-1
+<p><code>shift()</code>返回数组中的第一个</p>
+
+<p><code>unshift()</code>返回新数组的长度</p>
+
+<p><code>reverse()</code>反转数组项的顺序</p>
+
+<p>Array转String <code>join()</code></p>
+
+<p>String转Array <code>split()</code></p>
+</blockquote>
+
+<pre><code class="language-js">// 方法1：返回要查找的项在数组中的位置，或者在没找到的情况下返回-1
 function deduplicate(arr) {
-	var newArr = [];
-	for(var i=0;i&lt;arr.length;i++) {
-		if(newArr.indexOf(arr[i]) == -1) {
-			newArr.push(arr[i])
-		}
-	}
-	return newArr;
+  var newArr = [];
+  for(var i=0;i&lt;arr.length;i++) {
+    if(newArr.indexOf(arr[i]) == -1) {
+      newArr.push(arr[i])
+    }
+  }
+  return newArr;
 }
-方法二：
+// 方法2：
 (arr) =&gt; [...new Set(arr)].sort()
 </code></pre>
 
@@ -316,15 +322,15 @@ function deduplicate(arr) {
 <li>Date</li>
 </ol>
 
-<pre><code>getFullYear() // 年;getMonths+1 // 月;getDate() // 日;
-getHours // 小时;getMinutes // 分钟;getSeconds // 秒
+<pre><code class="language-js">getFullYear() // 年;getMonths+1 // 月;getDate() // 日;
+getHours() // 小时;getMinutes // 分钟;getSeconds // 秒
 </code></pre>
 
 <ol>
 <li>正则</li>
 </ol>
 
-<pre><code>\d number
+<pre><code class="language-js">\d number
 \w number chart _
 var pattern = /^d.css$/;
 pattern.test(str);
@@ -376,17 +382,17 @@ pattern.test(str);
 
 <p>3.扫面上下文的<strong>变量声明</strong>:变量的值初始化为undefined。如果变量的名字已经在变量对象里存在，不进行任何操作</p>
 
-<pre><code>(function() {
+<pre><code class="language-js">(function() {
     console.log(typeof name); 		// function
     console.log(typeof another); 	// undefined
 
     var name = 'Abby',
-        another = function() {
-            return 'Lucky';
-        };
+      another = function() {
+          return 'Lucky';
+      };
 
     function name() {
-        return 'Abby';
+      return 'Abby';
     }
 
     console.log(typeof name); 		// string
@@ -436,7 +442,7 @@ pattern.test(str);
 
 <h3 id="dom操作">DOM操作</h3>
 
-<pre><code>document.write('&lt;p&gt;这是一个段落！&lt;/p&gt;')
+<pre><code class="language-js">document.write('&lt;p&gt;这是一个段落！&lt;/p&gt;')
 createElement('p')
 appendChild()
 createTextNode()
@@ -446,14 +452,14 @@ replaceChiid()
 
 <p>元素实际大小</p>
 
-<pre><code>.clientWidth(include padding)
+<pre><code class="language-js">.clientWidth(include padding)
 .offsetWidth(include border)
 </code></pre>
 
 <h3 id="事件对象">事件对象</h3>
 
-<pre><code>input.onclick = function(event) {
-	var e = event || window.event;
+<pre><code class="language-js">input.onclick = function(event) {
+  var e = event || window.event;
 }
 </code></pre>
 
@@ -472,9 +478,9 @@ attachEvent() detachEvent()</p>
 
 <p>阻止冒泡：</p>
 
-<pre><code>function stopPro(ev) {
-	var e = ev || window.event;
-	window.event ? e.cancelBubble = true : e.stopPropagation()
+<pre><code class="language-js">function stopPro(ev) {
+  var e = ev || window.event;
+  window.event ? e.cancelBubble = true : e.stopPropagation()
 }
 </code></pre>
 
@@ -490,20 +496,20 @@ attachEvent() detachEvent()</p>
 
 <p>就是将子元素的事件通过冒泡的形式交由父元素来执行</p>
 
-<pre><code>var ul = document.getElementById('parentUl');  
+<pre><code class="language-js">var ul = document.getElementById('parentUl');  
 ul.onclick=function (event) {  
   var e = event||window.event,  
-          source = e.target || e.srcElement;
+    source = e.target || e.srcElement;
   //target表示在事件冒泡中触发事件的源元素，在IE中是srcElement  
-    if(source.nodeName.toLowerCase() == &quot;li&quot;){   //判断只有li触发的才会输出内容  
-        alert(source.innerHTML);  
-    }  
-    stopPropagation(e);                           //阻止继续冒泡  
+  if(source.nodeName.toLowerCase() == &quot;li&quot;){   //判断只有li触发的才会输出内容  
+    alert(source.innerHTML);  
+  }  
+  stopPropagation(e);                           //阻止继续冒泡  
 };  
 function addElement() {  
-    var li = document.createElement('li');  
-    li.innerHTML=&quot;我是新孩子&quot;;  
-    ul.appendChild(li);  
+  var li = document.createElement('li');  
+  li.innerHTML=&quot;我是新孩子&quot;;  
+  ul.appendChild(li);  
 }
 </code></pre>
 
@@ -529,14 +535,53 @@ function addElement() {
 <li><p>sessionStorage存储在窗口对象中，窗口消失，数据丢失，刷新不丢失</p></li>
 </ul>
 
-<p>|成员名|参数|描述|
-|&ndash;|&ndash;|&ndash;|
-|length|属性|获取存储数据的条数|
-|key(n)|n索引值|根据索引返回|
-|getItem(key)|键名|获取|
-|setItem(key,value)|键值|设置|
-|removeItem(key)|键名|删除|
-|claer()|无|清空|</p>
+<table>
+<thead>
+<tr>
+<th align="left">成员名</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">length</td>
+<td align="left">属性</td>
+<td align="left">获取存储数据的条数</td>
+</tr>
+
+<tr>
+<td align="left">key(n)</td>
+<td align="left">n索引值</td>
+<td align="left">根据索引返回</td>
+</tr>
+
+<tr>
+<td align="left">getItem(key)</td>
+<td align="left">键名</td>
+<td align="left">获取</td>
+</tr>
+
+<tr>
+<td align="left">setItem(key,value)</td>
+<td align="left">键值</td>
+<td align="left">设置</td>
+</tr>
+
+<tr>
+<td align="left">removeItem(key)</td>
+<td align="left">键名</td>
+<td align="left">删除</td>
+</tr>
+
+<tr>
+<td align="left">claer()</td>
+<td align="left">无</td>
+<td align="left">清空</td>
+</tr>
+</tbody>
+</table>
 
 <h2 id="ajax和跨域">ajax和跨域</h2>
 
@@ -621,13 +666,13 @@ socket.onmessage = function(event){
 
 <pre><code class="language-js">var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
-	if(xhr.readyState == 4) {
-		if(xhr.status == 200 || xhr.status == 304) {
-			console.log(xhr.responseText)
-		} else {
-			console.log(&quot;request is unsuccessful&quot;)
-		}
-	}
+  if(xhr.readyState == 4) {
+    if(xhr.status == 200 || xhr.status == 304) {
+      console.log(xhr.responseText)
+    } else {
+      console.log(&quot;request is unsuccessful&quot;)
+    }
+  }
 }
 xhr.open('get',url,true);
 xhr.send(null);
@@ -647,7 +692,7 @@ xhr.send(null);
 <li>构造模式</li>
 </ul>
 
-<pre><code>function Construct() {
+<pre><code class="language-js">function Construct() {
     this.a = a;
     this.b = b;
     this.sayHi = function () {
@@ -669,18 +714,7 @@ xhr.send(null);
     </div>
 
     
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">hu_binbin</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">2018-03-14</span>
-  </p>
-  
-  
-</div>
+    
 
     
     
@@ -724,9 +758,8 @@ xhr.send(null);
       <div class="social-links">
       <a href="mailto:hu_binbin@outlook.com" class="iconfont icon-email" title="email"></a>
       <a href="http://www.twitter.com/hu_binbin" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="http://www.facebook.com/hu_binbin" class="iconfont icon-facebook" title="facebook"></a>
       <a href="https://github.com/hubinbin91" class="iconfont icon-github" title="github"></a>
-      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://weibo.com/hu_binbin" class="iconfont icon-weibo" title="weibo"></a>
 </div>
 
 <div class="copyright">
@@ -763,6 +796,14 @@ xhr.send(null);
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
 <script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
 
