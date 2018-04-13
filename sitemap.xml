@@ -1,344 +1,267 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<?xml-stylesheet type="text/xsl" href="https://hubinbin91.github.io/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="http://hubinbin91.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hubinbin91.github.io/post/even-preview/</loc>
+    <loc>http://hubinbin91.github.io/post/even-preview/</loc>
     <lastmod>2015-08-23T18:03:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/about/</loc>
+    <loc>http://hubinbin91.github.io/about/</loc>
     <lastmod>2017-08-28T21:41:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/vue-build/</loc>
+    <loc>http://hubinbin91.github.io/post/vue-build/</loc>
     <lastmod>2018-03-29T10:10:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/web-h5c3/</loc>
+    <loc>http://hubinbin91.github.io/post/web-h5c3/</loc>
     <lastmod>2018-03-16T16:54:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/web-es6/</loc>
+    <loc>http://hubinbin91.github.io/post/web-es6/</loc>
     <lastmod>2018-03-16T16:54:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/web-js/</loc>
+    <loc>http://hubinbin91.github.io/post/web-js/</loc>
     <lastmod>2018-03-14T15:21:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/web-html/</loc>
+    <loc>http://hubinbin91.github.io/post/web-html/</loc>
     <lastmod>2018-03-13T16:54:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/web-start/</loc>
+    <loc>http://hubinbin91.github.io/post/web-start/</loc>
     <lastmod>2018-03-10T16:54:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/hugo-build/</loc>
+    <loc>http://hubinbin91.github.io/post/hugo-build/</loc>
     <lastmod>2017-09-15T16:03:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/english-preview/</loc>
+    <loc>http://hubinbin91.github.io/post/english-preview/</loc>
     <lastmod>2017-08-31T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/shortcodes/</loc>
+    <loc>http://hubinbin91.github.io/post/shortcodes/</loc>
     <lastmod>2015-02-01T18:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/syntax-highlighting/</loc>
+    <loc>http://hubinbin91.github.io/post/syntax-highlighting/</loc>
     <lastmod>2015-08-30T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/japanese-preview/</loc>
+    <loc>http://hubinbin91.github.io/post/japanese-preview/</loc>
     <lastmod>2015-08-30T01:53:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/chinese-preview/</loc>
+    <loc>http://hubinbin91.github.io/post/chinese-preview/</loc>
     <lastmod>2015-08-30T01:37:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/js-flowchart-diagrams/</loc>
+    <loc>http://hubinbin91.github.io/post/js-flowchart-diagrams/</loc>
     <lastmod>2015-03-04T21:57:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/post/js-sequence-diagrams/</loc>
+    <loc>http://hubinbin91.github.io/post/js-sequence-diagrams/</loc>
     <lastmod>2015-03-04T21:57:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/blog/</loc>
+    <loc>http://hubinbin91.github.io/tags/blog/</loc>
     <lastmod>2017-09-15T16:03:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/</loc>
+    <loc>http://hubinbin91.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/category-2/</loc>
-    <lastmod>2015-08-23T18:03:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/categories/category-3/</loc>
-    <lastmod>2015-08-23T18:03:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/tags/english/</loc>
+    <loc>http://hubinbin91.github.io/tags/english/</loc>
     <lastmod>2017-08-31T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/english/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/</loc>
+    <loc>http://hubinbin91.github.io/</loc>
     <lastmod>2015-08-23T18:03:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/javascript/</loc>
+    <loc>http://hubinbin91.github.io/tags/javascript/</loc>
     <lastmod>2018-03-14T15:21:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/javascript/</loc>
-    <lastmod>2018-03-14T15:21:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/post/</loc>
+    <loc>http://hubinbin91.github.io/post/</loc>
     <lastmod>2015-08-23T18:03:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/preview/</loc>
+    <loc>http://hubinbin91.github.io/tags/preview/</loc>
     <lastmod>2015-08-23T18:03:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/shortcodes/</loc>
+    <loc>http://hubinbin91.github.io/tags/shortcodes/</loc>
     <lastmod>2015-02-01T18:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/shortcodes/</loc>
-    <lastmod>2015-02-01T18:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/tags/syntax-highlighting/</loc>
+    <loc>http://hubinbin91.github.io/tags/syntax-highlighting/</loc>
     <lastmod>2015-08-30T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/syntax-highlighting/</loc>
-    <lastmod>2015-08-30T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/tags/tag-1/</loc>
+    <loc>http://hubinbin91.github.io/tags/tag-1/</loc>
     <lastmod>2015-08-30T01:37:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/tag-2/</loc>
+    <loc>http://hubinbin91.github.io/tags/tag-2/</loc>
     <lastmod>2017-08-31T15:43:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/tag-3/</loc>
+    <loc>http://hubinbin91.github.io/tags/tag-3/</loc>
     <lastmod>2015-08-23T18:03:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/tag-4/</loc>
+    <loc>http://hubinbin91.github.io/tags/tag-4/</loc>
     <lastmod>2015-08-30T01:53:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/tag-5/</loc>
+    <loc>http://hubinbin91.github.io/tags/tag-5/</loc>
     <lastmod>2015-08-30T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/</loc>
+    <loc>http://hubinbin91.github.io/tags/</loc>
     <lastmod>2017-09-15T16:03:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/theme-preview/</loc>
+    <loc>http://hubinbin91.github.io/tags/theme-preview/</loc>
     <lastmod>2015-08-23T18:03:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/theme-preview/</loc>
-    <lastmod>2015-08-23T18:03:09+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/tags/tools/</loc>
+    <loc>http://hubinbin91.github.io/tags/tools/</loc>
     <lastmod>2017-09-15T16:03:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/tools/</loc>
-    <lastmod>2017-09-15T16:03:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/tags/vue/</loc>
+    <loc>http://hubinbin91.github.io/tags/vue/</loc>
     <lastmod>2018-03-29T10:10:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/tags/web/</loc>
+    <loc>http://hubinbin91.github.io/tags/web/</loc>
     <lastmod>2018-03-29T10:10:46+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/web/</loc>
-    <lastmod>2018-03-29T10:10:46+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/tags/%E4%B8%AD%E6%96%87/</loc>
+    <loc>http://hubinbin91.github.io/tags/%E4%B8%AD%E6%96%87/</loc>
     <lastmod>2015-08-30T01:37:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/%E4%B8%AD%E6%96%87/</loc>
-    <lastmod>2015-08-30T01:37:56+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
+    <loc>http://hubinbin91.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
     <lastmod>2015-08-30T01:53:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://hubinbin91.github.io/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
-    <lastmod>2015-08-30T01:53:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://hubinbin91.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
+    <loc>http://hubinbin91.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
     <lastmod>2018-03-14T15:21:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>

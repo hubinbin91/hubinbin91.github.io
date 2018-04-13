@@ -2,103 +2,103 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Hubble&#39;s Blog</title>
-    <link>https://hubinbin91.github.io/post/</link>
+    <link>http://hubinbin91.github.io/post/</link>
     <description>Recent content in Posts on Hubble&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 23 Aug 2015 18:03:09 +0800</lastBuildDate>
     
-	<atom:link href="https://hubinbin91.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://hubinbin91.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Theme preview</title>
-      <link>https://hubinbin91.github.io/post/even-preview/</link>
+      <link>http://hubinbin91.github.io/post/even-preview/</link>
       <pubDate>Sun, 23 Aug 2015 18:03:09 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/even-preview/</guid>
+      <guid>http://hubinbin91.github.io/post/even-preview/</guid>
       <description>Copy from 《Hugo 主题 Nuo 文章样式预览》 这篇文章集中说明主题所支持的 Markdown 语法和 Hugo Shortcodes 插件，你也可以在这里预览到他们的样子。如果你不喜欢某些样式，可以去</description>
     </item>
     
     <item>
       <title>Vue爬坑</title>
-      <link>https://hubinbin91.github.io/post/vue-build/</link>
+      <link>http://hubinbin91.github.io/post/vue-build/</link>
       <pubDate>Thu, 29 Mar 2018 10:10:46 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/vue-build/</guid>
+      <guid>http://hubinbin91.github.io/post/vue-build/</guid>
       <description>vue-cli搭建项目 一、安装相关依赖 node.js git 二、安装vue-cli cnpm install -g vue-cli 安装若失败，可以使用npm cache clean清理缓存试试 验证安装成功vue</description>
     </item>
     
     <item>
       <title>Web H5c3</title>
-      <link>https://hubinbin91.github.io/post/web-h5c3/</link>
+      <link>http://hubinbin91.github.io/post/web-h5c3/</link>
       <pubDate>Fri, 16 Mar 2018 16:54:41 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/web-h5c3/</guid>
+      <guid>http://hubinbin91.github.io/post/web-h5c3/</guid>
       <description>html5 标签 newwork CSS3 背景、边框、阴影 渐变、动画 Flex布局 容器 父容器可以统一设置子容器的排列方式，子容器也可以单独设置自身的排列方式，如果两者同时设置</description>
     </item>
     
     <item>
       <title>Web ES6</title>
-      <link>https://hubinbin91.github.io/post/web-es6/</link>
+      <link>http://hubinbin91.github.io/post/web-es6/</link>
       <pubDate>Fri, 16 Mar 2018 16:54:05 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/web-es6/</guid>
+      <guid>http://hubinbin91.github.io/post/web-es6/</guid>
       <description>let const var关键字 1. let和const let和const用于创建块级作用域 2. 不存在变量提升 &amp;amp; 暂时性死区 var =&amp;gt; 变量可以在声明之前使用，值为unde</description>
     </item>
     
     <item>
       <title>JavaScript知识点总结</title>
-      <link>https://hubinbin91.github.io/post/web-js/</link>
+      <link>http://hubinbin91.github.io/post/web-js/</link>
       <pubDate>Wed, 14 Mar 2018 15:21:10 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/web-js/</guid>
+      <guid>http://hubinbin91.github.io/post/web-js/</guid>
       <description>概念 页面渲染 浏览器渲染引擎开始解析html，根据元素标签构建DOM节点 根据css样式构建渲染树，包括元素的大小、颜色，隐藏的元素不会被构建到</description>
     </item>
     
     <item>
       <title>Web-HTML</title>
-      <link>https://hubinbin91.github.io/post/web-html/</link>
+      <link>http://hubinbin91.github.io/post/web-html/</link>
       <pubDate>Tue, 13 Mar 2018 16:54:24 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/web-html/</guid>
+      <guid>http://hubinbin91.github.io/post/web-html/</guid>
       <description>HTML标签属性 doctype 文档类型声明，告诉标记语言解析器用何种文档类型定义DTD来解析严格版本、过渡版本以及框架版本 HTML 4.01规定了三种文档类型：</description>
     </item>
     
     <item>
       <title>Web-START</title>
-      <link>https://hubinbin91.github.io/post/web-start/</link>
+      <link>http://hubinbin91.github.io/post/web-start/</link>
       <pubDate>Sat, 10 Mar 2018 16:54:17 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/web-start/</guid>
+      <guid>http://hubinbin91.github.io/post/web-start/</guid>
       <description>从url输入到页面展示 应用层DNS解析域名：客户端先检查本地是否有对应的IP地址，若找到则返回响应的IP地址。若没找到则请求上级DNS服务器</description>
     </item>
     
     <item>
       <title>基于Hugo搭建个人Blog</title>
-      <link>https://hubinbin91.github.io/post/hugo-build/</link>
+      <link>http://hubinbin91.github.io/post/hugo-build/</link>
       <pubDate>Fri, 15 Sep 2017 16:03:27 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/hugo-build/</guid>
+      <guid>http://hubinbin91.github.io/post/hugo-build/</guid>
       <description>前言 hugo和hexo一样，是静态网站生成器，特点是基于Go语言编写，部署高效快速。 安装 下载对应操作系统版本的Hugo安装包： https://github.com/gohugoio/hugo/releases 解压缩或者安</description>
     </item>
     
     <item>
       <title>[English] Creating a New Theme</title>
-      <link>https://hubinbin91.github.io/post/english-preview/</link>
+      <link>http://hubinbin91.github.io/post/english-preview/</link>
       <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/english-preview/</guid>
+      <guid>http://hubinbin91.github.io/post/english-preview/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
       <title>Shortcodes</title>
-      <link>https://hubinbin91.github.io/post/shortcodes/</link>
+      <link>http://hubinbin91.github.io/post/shortcodes/</link>
       <pubDate>Sun, 30 Aug 2015 16:01:23 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/shortcodes/</guid>
+      <guid>http://hubinbin91.github.io/post/shortcodes/</guid>
       <description>&lt;h1 id=&#34;center-right-left&#34;&gt;center, right, left&lt;/h1&gt;
 
 &lt;pre&gt;&lt;code&gt;## default
@@ -125,10 +125,10 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>Syntax Highlighting</title>
-      <link>https://hubinbin91.github.io/post/syntax-highlighting/</link>
+      <link>http://hubinbin91.github.io/post/syntax-highlighting/</link>
       <pubDate>Sun, 30 Aug 2015 16:01:23 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/syntax-highlighting/</guid>
+      <guid>http://hubinbin91.github.io/post/syntax-highlighting/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;function helloWorld () {
   alert(&amp;quot;Hello, World!&amp;quot;)
 }
@@ -139,28 +139,28 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>[日本語] 敬語体系</title>
-      <link>https://hubinbin91.github.io/post/japanese-preview/</link>
+      <link>http://hubinbin91.github.io/post/japanese-preview/</link>
       <pubDate>Sun, 30 Aug 2015 01:53:34 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/japanese-preview/</guid>
+      <guid>http://hubinbin91.github.io/post/japanese-preview/</guid>
       <description>日本語の敬語体系は、一般に、大きく尊敬語・謙譲語・丁寧語に分類される。文化審議会国語分科会は、2007年2月に「敬語の指針」を答申し、これに</description>
     </item>
     
     <item>
       <title>[中文] 《长恨歌》</title>
-      <link>https://hubinbin91.github.io/post/chinese-preview/</link>
+      <link>http://hubinbin91.github.io/post/chinese-preview/</link>
       <pubDate>Sun, 30 Aug 2015 01:37:56 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/chinese-preview/</guid>
+      <guid>http://hubinbin91.github.io/post/chinese-preview/</guid>
       <description>《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。 第一段：贵妃受宠爱 汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。 天生丽质难</description>
     </item>
     
     <item>
       <title>JS Flowchart Diagrams</title>
-      <link>https://hubinbin91.github.io/post/js-flowchart-diagrams/</link>
+      <link>http://hubinbin91.github.io/post/js-flowchart-diagrams/</link>
       <pubDate>Wed, 04 Mar 2015 21:57:50 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/js-flowchart-diagrams/</guid>
+      <guid>http://hubinbin91.github.io/post/js-flowchart-diagrams/</guid>
       <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-flowchart&#34;&gt;st=&amp;gt;start: Start|past:&amp;gt;http://www.google.com[blank]
@@ -185,10 +185,10 @@ c2(no)-&amp;gt;op2-&amp;gt;e
     
     <item>
       <title>JS Sequence Diagrams</title>
-      <link>https://hubinbin91.github.io/post/js-sequence-diagrams/</link>
+      <link>http://hubinbin91.github.io/post/js-sequence-diagrams/</link>
       <pubDate>Wed, 04 Mar 2015 21:57:45 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/js-sequence-diagrams/</guid>
+      <guid>http://hubinbin91.github.io/post/js-sequence-diagrams/</guid>
       <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sequence&#34;&gt;Andrew-&amp;gt;China: Says Hello

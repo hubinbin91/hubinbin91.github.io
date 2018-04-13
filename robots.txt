@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://hubinbin91.github.io/sitemap.xml
+Sitemap: http://hubinbin91.github.io/sitemap.xml
