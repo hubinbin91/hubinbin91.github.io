@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2018-03-29T10:10:46&#43;08:00" />
 <meta itemprop="dateModified" content="2018-03-29T10:10:46&#43;08:00" />
-<meta itemprop="wordCount" content="681">
+<meta itemprop="wordCount" content="697">
 
 
 
@@ -239,7 +239,7 @@ npm run build --report
 
 <figure class="center">
     
-        <img src="/img/vue-build/1-1.png" />
+        <img src="/img/web-vue/1-1.png" />
     
     
     <figcaption>
@@ -252,13 +252,51 @@ npm run build --report
 
 <p>子组件在props中添加元素后，不需要在data中再添加变量了</p>
 
-<p><img src="https://hubinbin91.github.io/img/vue-build/22.png" alt="1-2" /></p>
+
+<figure class="center">
+    
+        <img src="/img/web-vue/1-2.png" />
+    
+    
+    <figcaption>
+        <h4>父组件部分</h4>
+        
+    </figcaption>
+    
+</figure>
+
 
 <h2 id="二-子组件向父组件传递数据">二、子组件向父组件传递数据</h2>
 
 <p>子组件主要通过事件传递数据给父组件</p>
 
-<p><img src="https://hubinbin91.github.io/img/vue-build/33.png" alt="cd" /></p>
+
+<figure class="center">
+    
+        <img src="/img/web-vue/1-3.png" />
+    
+    
+    <figcaption>
+        <h4>子组件部分</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+<figure class="center">
+    
+        <img src="/img/web-vue/1-4.png" />
+    
+    
+    <figcaption>
+        <h4>父组件部分</h4>
+        
+    </figcaption>
+    
+</figure>
+
 
 <pre><code>&lt;Child-Component @transfer=&quot;getUser&quot;&gt;&lt;/Child-Component&gt;
 
@@ -332,7 +370,19 @@ export default store
 
 <h3 id="修改状态">修改状态</h3>
 
-<p><img src="https://hubinbin91.github.io/img/vue-build/44.png" alt="ed" /></p>
+
+<figure class="center">
+    
+        <img src="/img/web-vue/1-5.png" />
+    
+    
+    <figcaption>
+        <h4>vuex</h4>
+        
+    </figcaption>
+    
+</figure>
+
 
 <pre><code class="language-js">methods: {
   setAuthor () {
