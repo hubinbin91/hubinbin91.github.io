@@ -32,6 +32,24 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>Web Linux</title>
+      <link>http://hubinbin91.github.io/post/web-linux/</link>
+      <pubDate>Mon, 16 Apr 2018 13:49:12 +0800</pubDate>
+      
+      <guid>http://hubinbin91.github.io/post/web-linux/</guid>
+      <description>VMware 安装 序列号 以管理员权限运行 虚拟网络配置 桥接模式 (相对外部是真实的主机) nat模式√ (本地主机作为路由) Ubuntu安装 语言：other-A</description>
+    </item>
+    
+    <item>
+      <title>Node.js项目部署阿里云</title>
+      <link>http://hubinbin91.github.io/post/web-first/</link>
+      <pubDate>Fri, 13 Apr 2018 16:54:05 +0800</pubDate>
+      
+      <guid>http://hubinbin91.github.io/post/web-first/</guid>
+      <description>一、远程链接 服务器Linux并且电脑是Windows 远程链接工具: Xshell和SecureCRT 服务器Window Server并且电脑Wi</description>
+    </item>
+    
+    <item>
       <title>Web Vue</title>
       <link>http://hubinbin91.github.io/post/web-vue/</link>
       <pubDate>Thu, 29 Mar 2018 10:10:46 +0800</pubDate>
