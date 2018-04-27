@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on hubinbin&#39;s blog</title>
+    <link>https://hubinbin91.github.io/tags/linux/</link>
+    <description>Recent content in Linux on hubinbin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Oct 2017 13:35:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://hubinbin91.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux核心操作入门</title>
+      <link>https://hubinbin91.github.io/post/web-linux/</link>
+      <pubDate>Sun, 15 Oct 2017 13:35:42 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-linux/</guid>
+      <description>VMware 安装 序列号 -- 此处就不多说，但注意使用管理员权限运行安装 虚拟网络配置 桥接模式 (相对外部是真实的主机) nat模式√ (本地主机作为路由) Ubun</description>
+    </item>
+    
+  </channel>
+</rss>

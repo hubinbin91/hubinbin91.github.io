@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hubinbin&#39;s blog</title>
+    <link>https://hubinbin91.github.io/</link>
+    <description>Recent content on hubinbin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Aug 2015 18:03:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://hubinbin91.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown preview</title>
+      <link>https://hubinbin91.github.io/post/even-preview/</link>
+      <pubDate>Sun, 23 Aug 2015 18:03:09 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/even-preview/</guid>
+      <description>Copy from 《Hugo 主题 Nuo 文章样式预览》 这篇文章集中说明主题所支持的 Markdown 语法和 Hugo Shortcodes 插件，你也可以在这里预览到他们的样子。如果你不喜欢某些样式，可以去</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://hubinbin91.github.io/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/about/</guid>
+      <description>Hugo is a static site engine written in Go.
+It makes use of a variety of open source projects including:
+ Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Web-ES6语法</title>
+      <link>https://hubinbin91.github.io/post/web-es6/</link>
+      <pubDate>Tue, 21 Nov 2017 19:42:52 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-es6/</guid>
+      <description>let const var关键字 let和const用于创建块级作用域 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用会</description>
+    </item>
+    
+    <item>
+      <title>Web-JavaScript知识点总结</title>
+      <link>https://hubinbin91.github.io/post/web-js/</link>
+      <pubDate>Wed, 18 Oct 2017 19:42:52 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-js/</guid>
+      <description>获取元素到页面可视区顶端距离有什么方法 1. 原生的offsetTop， 2. HTML5的getBoundClientRect对象中的top 3. $(&amp;ldquo;).offset().top-$(document).scrollTop(); 概念 页</description>
+    </item>
+    
+    <item>
+      <title>Web-html和css总结</title>
+      <link>https://hubinbin91.github.io/post/web-html/</link>
+      <pubDate>Tue, 17 Oct 2017 19:42:52 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-html/</guid>
+      <description>HTML 标签属性 标签属性 文档类型声明，告诉标记语言解析器用何种文档类型定义DTD来解析严格版本、过渡版本以及框架版本 HTML 4.01规定了三种文档类型：</description>
+    </item>
+    
+    <item>
+      <title>Linux核心操作入门</title>
+      <link>https://hubinbin91.github.io/post/web-linux/</link>
+      <pubDate>Sun, 15 Oct 2017 13:35:42 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-linux/</guid>
+      <description>VMware 安装 序列号 -- 此处就不多说，但注意使用管理员权限运行安装 虚拟网络配置 桥接模式 (相对外部是真实的主机) nat模式√ (本地主机作为路由) Ubun</description>
+    </item>
+    
+    <item>
+      <title>基于Hugo搭建个人Blog</title>
+      <link>https://hubinbin91.github.io/post/web-hugo/</link>
+      <pubDate>Fri, 15 Sep 2017 13:18:46 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-hugo/</guid>
+      <description>前言 hugo和hexo一样，是静态网站生成器，特点是基于Go语言编写，部署高效快速。 安装 下载对应操作系统版本的Hugo安装包: https://github.com/gohugoio/hugo/releases 解压缩或者安</description>
+    </item>
+    
+  </channel>
+</rss>

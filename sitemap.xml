@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="https://hubinbin91.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://hubinbin91.github.io/post/even-preview/</loc>
+    <lastmod>2015-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/about/</loc>
+    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/post/web-es6/</loc>
+    <lastmod>2017-11-21T19:42:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/post/web-js/</loc>
+    <lastmod>2017-10-18T19:42:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/post/web-html/</loc>
+    <lastmod>2017-10-17T19:42:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/post/web-linux/</loc>
+    <lastmod>2017-10-15T13:35:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/post/web-hugo/</loc>
+    <lastmod>2017-09-15T13:18:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/tags/blog/</loc>
+    <lastmod>2017-09-15T13:18:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/tags/css/</loc>
+    <lastmod>2017-10-17T19:42:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/tags/es6/</loc>
+    <lastmod>2017-11-21T19:42:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/tags/html/</loc>
+    <lastmod>2017-10-17T19:42:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/tags/hugo/</loc>
+    <lastmod>2017-09-15T13:18:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/tags/javascript/</loc>
+    <lastmod>2017-11-21T19:42:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/tags/linux/</loc>
+    <lastmod>2017-10-15T13:35:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/tags/markdown/</loc>
+    <lastmod>2015-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/post/</loc>
+    <lastmod>2015-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/tags/</loc>
+    <lastmod>2017-09-15T13:18:46+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hubinbin91.github.io/</loc>
+    <lastmod>2015-08-23T18:03:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

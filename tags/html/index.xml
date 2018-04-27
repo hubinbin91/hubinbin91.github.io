@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html on hubinbin&#39;s blog</title>
+    <link>https://hubinbin91.github.io/tags/html/</link>
+    <description>Recent content in Html on hubinbin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 17 Oct 2017 19:42:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://hubinbin91.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web-html和css总结</title>
+      <link>https://hubinbin91.github.io/post/web-html/</link>
+      <pubDate>Tue, 17 Oct 2017 19:42:52 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-html/</guid>
+      <description>HTML 标签属性 标签属性 文档类型声明，告诉标记语言解析器用何种文档类型定义DTD来解析严格版本、过渡版本以及框架版本 HTML 4.01规定了三种文档类型：</description>
+    </item>
+    
+  </channel>
+</rss>
