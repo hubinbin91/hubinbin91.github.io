@@ -76,7 +76,7 @@
 
 <meta itemprop="datePublished" content="2017-11-21T19:42:52&#43;08:00" />
 <meta itemprop="dateModified" content="2017-11-21T19:42:52&#43;08:00" />
-<meta itemprop="wordCount" content="2602">
+<meta itemprop="wordCount" content="3174">
 
 
 
@@ -174,12 +174,15 @@
 <li><a href="#k-v的解构模式">k:v的解构模式</a></li>
 <li><a href="#用途">用途</a></li>
 </ul></li>
-<li><a href="#函数">函数</a></li>
+<li><a href="#函数">函数</a>
+<ul>
 <li><a href="#箭头函数">箭头函数</a></li>
-<li><a href="#字符串-数组增强">字符串、数组增强</a>
+</ul></li>
+<li><a href="#字符串-数组-对象增强">字符串、数组、对象增强</a>
 <ul>
 <li><a href="#字符串">字符串</a></li>
 <li><a href="#数组">数组</a></li>
+<li><a href="#对象">对象</a></li>
 </ul></li>
 <li><a href="#类">类</a></li>
 <li><a href="#set-map类型">set map类型</a></li>
@@ -189,10 +192,16 @@
 <li><a href="#2-promise状态">2. Promise状态</a></li>
 <li><a href="#3-promise-all">3. Promise.all()</a></li>
 <li><a href="#4-promise-race">4. Promise.race()</a></li>
-<li><a href="#5-resolve-函数">5. resolve()函数</a></li>
+<li><a href="#5-resolve-函数参数类型为promise时">5. resolve()函数参数类型为Promise时</a></li>
+<li><a href="#6-then-返回一个promise实例">6. then()返回一个promise实例:</a></li>
 <li><a href="#7-promise状态透传">7. Promise状态透传</a></li>
 </ul></li>
-<li><a href="#generator">Generator</a></li>
+<li><a href="#generator">Generator</a>
+<ul>
+<li><a href="#概念">概念</a></li>
+<li><a href="#next给函数内变量传值">next给函数内变量传值</a></li>
+</ul></li>
+<li><a href="#async-await">async/await</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -206,8 +215,6 @@
 <h2 id="let-const-var关键字">let const var关键字</h2>
 
 <p><code>let</code>和<code>const</code>用于创建块级作用域</p>
-
-<hr />
 
 <ol>
 <li>不存在变量提升
@@ -229,8 +236,6 @@
 }
 </code></pre>
 
-<hr />
-
 <ol>
 <li>存在暂时性死区</li>
 </ol>
@@ -245,8 +250,6 @@ if (true) {
 }
 </code></pre>
 
-<hr />
-
 <ol>
 <li>不允许重复声明</li>
 </ol>
@@ -255,8 +258,6 @@ if (true) {
 <li><code>var</code> 后一个覆盖前一个</li>
 <li><code>let</code>和<code>const</code> 再次声明会报错</li>
 </ul>
-
-<hr />
 
 <ol>
 <li>全局变量不再属于顶层变量</li>
@@ -270,13 +271,13 @@ let g = 1;
 console.log(window.g); // undefined
 </code></pre>
 
-<hr />
-
 <p><strong>let和const区别</strong></p>
 
-<p><code>let</code>可以先声明再赋值 <code>const</code>声明时必须赋值且为常量</p>
+<ul>
+<li><p><code>let</code>可以先声明再赋值 <code>const</code>声明时必须赋值且为常量</p></li>
 
-<p>如果是基本类型，存放的就是就是这个变量的值。但如果是引用类型，存放的是它的地址</p>
+<li><p>如果是基本类型，存放的就是就是这个变量的值。但如果是引用类型，存放的是它的地址</p></li>
+</ul>
 
 <h2 id="解构">解构</h2>
 
@@ -288,8 +289,6 @@ console.log(window.g); // undefined
 var {name,age}  = {name :&quot;老王&quot; , age : 12};
 </code></pre>
 
-<hr />
-
 <h3 id="k-v的解构模式">k:v的解构模式</h3>
 
 <pre><code class="language-js">let obj = {&quot;a&quot; : 1 , &quot;b&quot; : 2};
@@ -299,8 +298,6 @@ console.log(m);  //2
 console.log(a);  //报错
 console.log(b);  //报错
 </code></pre>
-
-<hr />
 
 <h3 id="用途">用途</h3>
 
@@ -335,22 +332,15 @@ for (let [key, value] of map) {
 <li>rest运算符</li>
 </ul>
 
+<h3 id="箭头函数">箭头函数</h3>
+
 <pre><code class="language-js">var f = v =&gt; v
-
-f() // 1
-</code></pre>
-
-<h2 id="箭头函数">箭头函数</h2>
-
-<pre><code class="language-js">var f = function(v) {
-  return v
-}
 </code></pre>
 
 <p>等价于</p>
 
-<pre><code class="language-js">var sum = function(a,b){
-  return a + b;
+<pre><code class="language-js">var f = function(v) {
+  return v
 }
 </code></pre>
 
@@ -360,7 +350,7 @@ f() // 1
 - 箭头函数不能当作构造函数，new时会报错
 - 函数内不存在<code>arguments</code></p>
 
-<h2 id="字符串-数组增强">字符串、数组增强</h2>
+<h2 id="字符串-数组-对象增强">字符串、数组、对象增强</h2>
 
 <h3 id="字符串">字符串</h3>
 
@@ -379,7 +369,36 @@ console.log(str);
 
 <h3 id="数组">数组</h3>
 
-<p><code>includes()</code>返回一个布尔值，判断数组中是否有某个项</p>
+<ul>
+<li>拓展运算符<code>...</code> 将数组转成逗号分隔的参数序列</li>
+<li><code>includes()</code>返回一个布尔值，判断数组中是否有某个项</li>
+</ul>
+
+<h3 id="对象">对象</h3>
+
+<ul>
+<li><p>Object.is()判断NaN</p></li>
+
+<li><p>Object.assign() 浅复制</p></li>
+</ul>
+
+<pre><code class="language-js">var target = {a:1}
+var source1 = {b:2}
+var source2 = {c:3}
+Object.assign(target,source1,source2)
+</code></pre>
+
+<p>同名属性后面会覆盖前面</p>
+
+<ul>
+<li>遍历对象的属性</li>
+</ul>
+
+<ol>
+<li>for in 自身和继承</li>
+<li>Object.keys(obj) 自身；返回的是数组</li>
+<li>Object.getOwnPropertyName(obj)</li>
+</ol>
 
 <h2 id="类">类</h2>
 
@@ -402,15 +421,56 @@ console.log(str);
 
 <h2 id="set-map类型">set map类型</h2>
 
-<p><code>Set</code>是不能有重复项的数组，<code>Map</code>是可以用引用类型值当做key的对象</p>
+<p><code>Set</code>是不能有重复项的数组</p>
 
-<p><code>add()</code>和<code>delete()</code></p>
+<ul>
+<li><code>size</code>：返回长度</li>
+<li><code>add(value)</code>：添加某个值，返回 Set 结构本身</li>
+<li><code>delete(value)</code>：删除某个值，返回一个布尔值，表示删除是否成功</li>
+<li><code>has(value)</code>：返回一个布尔值，表示该值是否为Set的成员</li>
+<li><code>clear()</code>：清除所有成员，没有返回值</li>
+</ul>
+
+<p><code>Map</code>是可以用引用类型值当做key的对象</p>
+
+<ul>
+<li>size返回 Map 结构的成员总数</li>
+<li>set(key, value)</li>
+<li>get(key)</li>
+<li>has(key)</li>
+<li>delete(key)</li>
+<li>clear()</li>
+</ul>
+
+<pre><code class="language-js">const map = new Map([
+  ['F', 'no'],
+  ['T',  'yes'],
+]);
+
+for (let key of map.keys()) {
+  console.log(key);
+}
+// &quot;F&quot;
+// &quot;T&quot;
+
+for (let value of map.values()) {
+  console.log(value);
+}
+// &quot;no&quot;
+// &quot;yes&quot;
+
+for (let item of map.entries()) {
+  console.log(item[0], item[1]);
+}
+// &quot;F&quot; &quot;no&quot;
+// &quot;T&quot; &quot;yes&quot;
+</code></pre>
 
 <h2 id="promise">Promise</h2>
 
 <h3 id="1-promise介绍">1. Promise介绍</h3>
 
-<p>Promise是异步编程的一种解决方案，用来替代传统的–回调和时间方案。</p>
+<p>Promise是异步编程的一种解决方案，用来替代传统的回调方案。</p>
 
 <p>所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。通过Promise实例调用then()方法表示异步语句执行后要做的事情。</p>
 
@@ -429,22 +489,19 @@ p.then(function(data) {
 })
 </code></pre>
 
-<ul>
-<li>Promise构造方法接受带有两个参数resolve和reject的匿名函数作为参数</li>
-<li>resolve将Promise的状态置为成功，并将异步操作结果data作为参数传给成功回调函数</li>
-<li>reject将Promise的状态置为失败，并将异步操作错误err作为参数传给失败回调函数</li>
-<li>then方法绑定两个回调函数，分别用来处理Promise成功状态和失败状态</li>
-</ul>
+<p>1、Promise构造方法接受带有两个参数resolve和reject的匿名函数作为参数</p>
+
+<p>2、resolve将Promise的状态置为成功，并将异步操作结果data作为参数传给成功回调函数</p>
+
+<p>3、reject将Promise的状态置为失败，并将异步操作错误err作为参数传给失败回调函数</p>
+
+<p>4、then方法绑定两个回调函数，分别用来处理Promise成功状态和失败状态</p>
+
+<p>5、生成新的promise实例时，就会立即执行其中的异步操作</p>
 
 <h3 id="2-promise状态">2. Promise状态</h3>
 
-<p>Promise对象代表一个异步操作，有三种状态：</p>
-
-<ul>
-<li>Pending（进行中）</li>
-<li>Resolved（已完成，又称 Fulfilled）</li>
-<li>Rejected（已失败）</li>
-</ul>
+<p>Promise对象代表一个异步操作，有三种状态:<code>Pending</code> <code>Resolved</code>或者Fulfilled <code>Rejected</code></p>
 
 <p>1、只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态</p>
 
@@ -485,11 +542,7 @@ Promise.all(promises).then(function(posts) {
 
 <p>跟Promise.all方法差不多。唯一的区别在于该方法返回的Promise实例并不会等待所有Proimse都跑完，而是只要有一个Promise实例改变状态，它就跟着改变状态。并使用第一个改变状态实例的返回值作为返回值</p>
 
-<h3 id="5-resolve-函数">5. resolve()函数</h3>
-
-<p>我们会在异常操作成功后调用resolve()函数，函数的作用是将Promise的状态由Pending置为Fulfilled，并将异常操作的结果作为参数传递给Fulfilled状态的回调函数</p>
-
-<p>参数类型为Promise时:</p>
+<h3 id="5-resolve-函数参数类型为promise时">5. resolve()函数参数类型为Promise时</h3>
 
 <pre><code class="language-js">var d = new Date();
 // 创建一个promise实例，该实例在2秒后进入fulfilled状态
@@ -508,7 +561,7 @@ promise2.then(
 
 <p>promise2中调用了resolve(promise1),promise2的状态由promise1决定</p>
 
-<p>then()返回一个promise实例:</p>
+<h3 id="6-then-返回一个promise实例">6. then()返回一个promise实例:</h3>
 
 <pre><code class="language-js">var d = new Date();
 var promise1 = new Promise(function(resolve, reject) {
@@ -520,14 +573,8 @@ var promise2 = promise1.then(function(result) {
 // promise2 Promise对
 </code></pre>
 
-<p>5.1 then()返回值
-无论promise1是resolve或者reject，promise2都会只调用成功的回调
-promise1的then()和promise2的then()同步执行
-5.2 then()返回promise
-与then()返回值正好相反</p>
-
-<p>5.3 then()无返回
-同then()返回值情况相同</p>
+<p>1、当x为值的时候，promise2直接进入fulfilled状态，无论promise1的状态是fulfilled或者是rejected
+2、当x为promise实例的时候，x的状态决定了promise2的状态</p>
 
 <p>总结：在回调方法中一定要有return语句</p>
 
@@ -535,10 +582,10 @@ promise1的then()和promise2的then()同步执行
 
 <p>如果当前的promise实例没有绑定回调或绑定的不是函数，那么实例就会把其状态以及不可变值或者不可变原因传递给当前实例调用.then方法返回的新promise实例</p>
 
-<p>总结
-回调中一定要使用return；防止丢失状态和结果
-在promise实例的最后使用catch做整体的错误捕获和处理
-利用Promise.then方法对回调函数返回结果的封装</p>
+<p>总结:
+1. 回调中一定要使用return；防止丢失状态和结果
+2. 在promise实例的最后使用catch做整体的错误捕获和处理
+3. 利用Promise.then方法对回调函数返回结果的封装</p>
 
 <pre><code class="language-js">var tic = function(timmer, str){
     return new Promise(function(resolve, reject) {
@@ -549,7 +596,7 @@ promise1的then()和promise2的then()同步执行
     });
 };
  
- 
+
 function *gen(){
     yield tic(3000, 'red');
     yield tic(1000, 'green');
@@ -573,6 +620,57 @@ step(gen, iterator);
 
 <h2 id="generator">Generator</h2>
 
+<h3 id="概念">概念</h3>
+
+<p>generator函数和普通函数形式上无异，差别是：</p>
+
+<ul>
+<li>function关键字与函数名之间有一个星号</li>
+<li>函数体内部使用yield语句，定义不同的内部状态</li>
+<li>调用Generator函数后，该函数并不执行，返回的也不是函数运行结果，而是一个指向内部状态的指针对象</li>
+<li>我们可以通过调用 next 方法，使得内部指针移向下一个状态</li>
+</ul>
+
+<pre><code class="language-js">function* helloWorldGenerator() {
+  yield 'hello';
+  yield 'world';
+  return 'ending';
+}
+var hw = helloWorldGenerator();
+hw.next()
+// { value: 'hello', done: false }
+hw.next()
+// { value: 'world', done: false }
+hw.next()
+// { value: 'ending', done: true }
+hw.next()
+// { value: undefined, done: true }
+</code></pre>
+
+<h3 id="next给函数内变量传值">next给函数内变量传值</h3>
+
+<p>yield表达式本身没有返回值，或者说总是返回undefined。next方法可以带一个参数，该参数就会被当作上一个yield表达式的返回值</p>
+
+<p>通过next方法的参数，就有办法在 Generator 函数开始运行之后，继续向函数体内部注入值。也就是说，可以在 Generator 函数运行的不同阶段，从外部向内部注入不同的值，从而调整函数行为</p>
+
+<p>这个用处在其用来实现 async/await 至关重要</p>
+
+<pre><code class="language-js">function* f() {
+  for(var i = 0; true; i++) {
+    var reset = yield i;
+    if(reset) { i = -1; }
+  }
+}
+var g = f();
+g.next() // { value: 0, done: false }
+g.next() // { value: 1, done: false }
+g.next(true) // { value: 0, done: false }
+</code></pre>
+
+<p>主要作用: iterator,infinite range,lazy evaluation,async/await</p>
+
+<h2 id="async-await">async/await</h2>
+
     </div>
 
     
@@ -593,9 +691,9 @@ step(gen, iterator);
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/even-preview/">
+          <a class="prev" href="/post/web-interview/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Markdown preview</span>
+            <span class="prev-text nav-default">Web Interview</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         

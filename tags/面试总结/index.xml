@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面试总结 on hubinbin&#39;s blog</title>
+    <link>https://hubinbin91.github.io/tags/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/</link>
+    <description>Recent content in 面试总结 on hubinbin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 03 Mar 2018 16:16:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://hubinbin91.github.io/tags/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Web Interview</title>
+      <link>https://hubinbin91.github.io/post/web-interview/</link>
+      <pubDate>Sat, 03 Mar 2018 16:16:49 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-interview/</guid>
+      <description>html 理解html语义化 css 盒模型 css reset 和 normalize.css 有什么区别 如何水平居中 垂直居中 BFC 清除浮动 js JS 有哪些数据类型？ （必考） Promise 怎么使用？ （必考） AJAX 手写一下？ （必</description>
+    </item>
+    
+  </channel>
+</rss>

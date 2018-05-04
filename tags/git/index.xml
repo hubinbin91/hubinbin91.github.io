@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on hubinbin&#39;s blog</title>
+    <link>https://hubinbin91.github.io/tags/git/</link>
+    <description>Recent content in Git on hubinbin&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 Oct 2017 13:55:37 +0800</lastBuildDate>
+    
+	<atom:link href="https://hubinbin91.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git核心操作入门</title>
+      <link>https://hubinbin91.github.io/post/web-git/</link>
+      <pubDate>Mon, 16 Oct 2017 13:55:37 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-git/</guid>
+      <description>Git 教程 详见 《廖雪峰Git教程》 git和svn区别 详见 git和svn区别 绑定远程仓库 绑定远程仓库 $ git config --global user.name &amp;quot;zhangsan&amp;quot; $ git config --global user.email &amp;quot;zhangsan@qq.com&amp;quot; ssh key(rsa加密)</description>
+    </item>
+    
+  </channel>
+</rss>

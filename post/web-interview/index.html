@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Web Interview - hubinbin&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="hubinbin" />
+  <meta name="description" content="html 理解html语义化 css 盒模型 css reset 和 normalize.css 有什么区别 如何水平居中 垂直居中 BFC 清除浮动 js JS 有哪些数据类型？ （必考） Promise 怎么使用？ （必考） AJAX 手写一下？ （必" />
+
+  <meta name="keywords" content="Hugo, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.37.1" />
+
+
+<link rel="canonical" href="https://hubinbin91.github.io/post/web-interview/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Web Interview" />
+<meta property="og:description" content="html 理解html语义化 css 盒模型 css reset 和 normalize.css 有什么区别 如何水平居中 垂直居中 BFC 清除浮动 js JS 有哪些数据类型？ （必考） Promise 怎么使用？ （必考） AJAX 手写一下？ （必" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hubinbin91.github.io/post/web-interview/" />
+
+
+
+<meta property="article:published_time" content="2018-03-03T16:16:49&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-03-03T16:16:49&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Web Interview">
+<meta itemprop="description" content="html 理解html语义化 css 盒模型 css reset 和 normalize.css 有什么区别 如何水平居中 垂直居中 BFC 清除浮动 js JS 有哪些数据类型？ （必考） Promise 怎么使用？ （必考） AJAX 手写一下？ （必">
+
+
+<meta itemprop="datePublished" content="2018-03-03T16:16:49&#43;08:00" />
+<meta itemprop="dateModified" content="2018-03-03T16:16:49&#43;08:00" />
+<meta itemprop="wordCount" content="1081">
+
+
+
+<meta itemprop="keywords" content="面试总结," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Web Interview"/>
+<meta name="twitter:description" content="html 理解html语义化 css 盒模型 css reset 和 normalize.css 有什么区别 如何水平居中 垂直居中 BFC 清除浮动 js JS 有哪些数据类型？ （必考） Promise 怎么使用？ （必考） AJAX 手写一下？ （必"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">binbin</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  
+  <img src="/img/logo-59x59.png" alt="hu" class="logo">
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Web Interview</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018/03/03 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#html">html</a></li>
+<li><a href="#css">css</a></li>
+<li><a href="#js">js</a></li>
+<li><a href="#dom">DOM</a></li>
+<li><a href="#http">http</a></li>
+<li><a href="#vue">Vue</a></li>
+<li><a href="#算法">算法</a></li>
+<li><a href="#websecure">webSecure</a></li>
+<li><a href="#webpack">webpack</a></li>
+<li><a href="#other">other</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h1 id="html">html</h1>
+
+<ol>
+<li>理解html语义化</li>
+</ol>
+
+<h1 id="css">css</h1>
+
+<ol>
+<li><p>盒模型</p></li>
+
+<li><p>css reset 和 normalize.css 有什么区别</p></li>
+
+<li><p>如何水平居中</p></li>
+
+<li><p>垂直居中</p></li>
+
+<li><p>BFC</p></li>
+
+<li><p>清除浮动</p></li>
+</ol>
+
+<h1 id="js">js</h1>
+
+<ol>
+<li><p>JS 有哪些数据类型？</p></li>
+
+<li><p>（必考） Promise 怎么使用？</p></li>
+
+<li><p>（必考） AJAX 手写一下？</p></li>
+
+<li><p>（必考）闭包是什么？</p></li>
+
+<li><p>（必考）这段代码里的 this 是什么？</p></li>
+
+<li><p>（必考）什么是立即执行函数？使用立即执行函数的目的是什么？</p></li>
+
+<li><p>async/await 语法了解吗？目的是什么？</p></li>
+
+<li><p>如何实现深拷贝？</p></li>
+
+<li><p>如何实现数组去重？</p></li>
+
+<li><p>如何用正则实现 string.trim()</p></li>
+
+<li><p>JS 原型是什么？</p></li>
+
+<li><p>ES 6 中的 class 了解吗？</p></li>
+
+<li><p>JS 如何实现继承？</p></li>
+</ol>
+
+<h1 id="dom">DOM</h1>
+
+<ol>
+<li><p>DOM 事件模型是什么？</p></li>
+
+<li><p>移动端的触摸事件了解吗？</p></li>
+
+<li><p>事件委托是什么？有什么好处</p></li>
+</ol>
+
+<h1 id="http">http</h1>
+
+<ol>
+<li><p>cookie读取,set,删除</p></li>
+
+<li><p>HTTP状态码</p></li>
+
+<li><p>HTTP缓存</p></li>
+
+<li><p>cache-control和etag</p></li>
+
+<li><p>cookie和session</p></li>
+
+<li><p>localstorage和cookie</p></li>
+
+<li><p>get和post</p></li>
+
+<li><p>JSONP CORS postMessage</p></li>
+</ol>
+
+<h1 id="vue">Vue</h1>
+
+<ol>
+<li><p>（必考）Vue 有哪些生命周期钩子函数？</p></li>
+
+<li><p>（必考）Vue 如何实现组件通信？</p></li>
+
+<li><p>Vuex 的作用是什么？</p></li>
+
+<li><p>VueRouter 路由是什么？</p></li>
+
+<li><p>Vue 的双向绑定是如何实现的？有什么缺点？</p></li>
+
+<li><p>Computed 计算属性的用法？跟 Methods 的区别</p></li>
+</ol>
+
+<h1 id="算法">算法</h1>
+
+<ol>
+<li><p>排序算法（背诵冒泡排序、选择排序、计数排序、快速排序、插入排序、归并排序）</p></li>
+
+<li><p>二分查找法</p></li>
+
+<li><p>翻转二叉树</p></li>
+</ol>
+
+<h1 id="websecure">webSecure</h1>
+
+<ol>
+<li><p>CSRF跨站请求伪造</p></li>
+
+<li><p>XSS跨站脚本注入</p></li>
+</ol>
+
+<h1 id="webpack">webpack</h1>
+
+<ol>
+<li><p>转译出的文件过大怎么办？</p></li>
+
+<li><p>转译速度慢什么办？</p></li>
+
+<li><p>写过 webpack loader 吗？</p></li>
+</ol>
+
+<h1 id="other">other</h1>
+
+<ol>
+<li>地址栏输入到页面的展示</li>
+</ol>
+
+<p>掌握HTML、CSS、JavaScript和ES6等；
+熟悉Vue、Element、LayUI、Echarts等前端框架、Ui库的使用；
+熟悉webpack、npm、bower等前端工程化工具
+熟练使用VScode、SVN、Git、SecureCRT等开发工具</p>
+
+<p>充电桩运营平台</p>
+
+<p>技术栈：Pug + LayUI + bower + grunt + EasyMock</p>
+
+<p>项目介绍：根据不同运营商的需求，细化运营机制，向设备发送远程控制指令同时接受上报的实时数据，完成对充电业务、充电设备的控制和管理</p>
+
+<p>成果：充电站管理(主要涉及增删查改页面)、站点收费信息(自定义收费和峰谷收费切换)、设备的绑定。在前期后端接口还未开发的情况下，使用EasyMock模拟API，完成前后端数据的调试</p>
+
+<p>车联网管理平台</p>
+
+<p>技术栈：Vue全家桶 + Element + Webpack + Echarts + fetch</p>
+
+<p>项目介绍：完成新增车辆信息的平台注册，在地图车辆监控界面对车辆的电池、整车控制器、充电状态、里程能耗等数据进行实时的监控。 并支持数据删选，可人性化设置需要查看的数据。平台保留所有车辆信息，并对信息进行处理和挖掘。形成电压极差报告、温度极差报告、车辆故障单等。</p>
+
+<p>成果：首页展示车辆全国的分布情况(高德API)，对每辆车的数据进行监控，采用Emqtt连接的方式来实时采集。
+threesixty插件完成车辆360度旋转，点击相应零部件展示相关数据信息。通过echarts折线图、柱状图、圆饼图等对后端保存的车辆数据进行展示。</p>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/">面试总结</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/even-preview/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Markdown preview</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/web-es6/">
+            <span class="next-text nav-default">Web-ES6语法</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:hu_binbin@outlook.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.twitter.com/hubinbin91" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/hubinbin91" class="iconfont icon-github" title="github"></a>
+      <a href="https://weibo.com/hubinbin91" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://hubinbin91.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2015 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">hubinbin</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

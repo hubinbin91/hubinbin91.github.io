@@ -32,6 +32,15 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>Web Interview</title>
+      <link>https://hubinbin91.github.io/post/web-interview/</link>
+      <pubDate>Sat, 03 Mar 2018 16:16:49 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-interview/</guid>
+      <description>html 理解html语义化 css 盒模型 css reset 和 normalize.css 有什么区别 如何水平居中 垂直居中 BFC 清除浮动 js JS 有哪些数据类型？ （必考） Promise 怎么使用？ （必考） AJAX 手写一下？ （必</description>
+    </item>
+    
+    <item>
       <title>Web-ES6语法</title>
       <link>https://hubinbin91.github.io/post/web-es6/</link>
       <pubDate>Tue, 21 Nov 2017 19:42:52 +0800</pubDate>
@@ -56,6 +65,15 @@ It makes use of a variety of open source projects including:
       
       <guid>https://hubinbin91.github.io/post/web-html/</guid>
       <description>HTML 标签属性 标签属性 文档类型声明，告诉标记语言解析器用何种文档类型定义DTD来解析严格版本、过渡版本以及框架版本 HTML 4.01规定了三种文档类型：</description>
+    </item>
+    
+    <item>
+      <title>Git核心操作入门</title>
+      <link>https://hubinbin91.github.io/post/web-git/</link>
+      <pubDate>Mon, 16 Oct 2017 13:55:37 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-git/</guid>
+      <description>Git 教程 详见 《廖雪峰Git教程》 git和svn区别 详见 git和svn区别 绑定远程仓库 绑定远程仓库 $ git config --global user.name &amp;quot;zhangsan&amp;quot; $ git config --global user.email &amp;quot;zhangsan@qq.com&amp;quot; ssh key(rsa加密)</description>
     </item>
     
     <item>
