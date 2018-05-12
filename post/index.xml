@@ -12,52 +12,34 @@
     
     
     <item>
-      <title>Markdown preview</title>
-      <link>https://hubinbin91.github.io/post/even-preview/</link>
+      <title>Markdown语法总结</title>
+      <link>https://hubinbin91.github.io/post/markdown-preview/</link>
       <pubDate>Sun, 23 Aug 2015 18:03:09 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/even-preview/</guid>
+      <guid>https://hubinbin91.github.io/post/markdown-preview/</guid>
       <description>Copy from 《Hugo 主题 Nuo 文章样式预览》 这篇文章集中说明主题所支持的 Markdown 语法和 Hugo Shortcodes 插件，你也可以在这里预览到他们的样子。如果你不喜欢某些样式，可以去</description>
     </item>
     
     <item>
-      <title>Web Interview</title>
-      <link>https://hubinbin91.github.io/post/web-interview/</link>
-      <pubDate>Sat, 03 Mar 2018 16:16:49 +0800</pubDate>
+      <title>HTTP总结</title>
+      <link>https://hubinbin91.github.io/post/web-other/</link>
+      <pubDate>Sun, 25 Feb 2018 14:10:14 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/web-interview/</guid>
-      <description>html 理解html语义化 css 盒模型 css reset 和 normalize.css 有什么区别 如何水平居中 垂直居中 BFC 清除浮动 js JS 有哪些数据类型？ （必考） Promise 怎么使用？ （必考） AJAX 手写一下？ （必</description>
+      <guid>https://hubinbin91.github.io/post/web-other/</guid>
+      <description>翻墙(安装xx-net) 下载安装包 设置IPv6 win7 全局PAC智能代理 申请appID(可能的话) xx-net1-160302|xx-net2-160302 TCP/IP TCP TCP/IP 协议分层模型 OSI七层协议模型、TCP/</description>
     </item>
     
     <item>
-      <title>Web-ES6语法</title>
+      <title>《ES6》随手记</title>
       <link>https://hubinbin91.github.io/post/web-es6/</link>
       <pubDate>Tue, 21 Nov 2017 19:42:52 +0800</pubDate>
       
       <guid>https://hubinbin91.github.io/post/web-es6/</guid>
-      <description>let const var关键字 let和const用于创建块级作用域 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用会</description>
+      <description>let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用</description>
     </item>
     
     <item>
-      <title>Web-JavaScript知识点总结</title>
-      <link>https://hubinbin91.github.io/post/web-js/</link>
-      <pubDate>Wed, 18 Oct 2017 19:42:52 +0800</pubDate>
-      
-      <guid>https://hubinbin91.github.io/post/web-js/</guid>
-      <description>获取元素到页面可视区顶端距离有什么方法 1. 原生的offsetTop， 2. HTML5的getBoundClientRect对象中的top 3. $(&amp;ldquo;).offset().top-$(document).scrollTop(); 概念 页</description>
-    </item>
-    
-    <item>
-      <title>Web-html和css总结</title>
-      <link>https://hubinbin91.github.io/post/web-html/</link>
-      <pubDate>Tue, 17 Oct 2017 19:42:52 +0800</pubDate>
-      
-      <guid>https://hubinbin91.github.io/post/web-html/</guid>
-      <description>HTML 标签属性 标签属性 文档类型声明，告诉标记语言解析器用何种文档类型定义DTD来解析严格版本、过渡版本以及框架版本 HTML 4.01规定了三种文档类型：</description>
-    </item>
-    
-    <item>
-      <title>Git核心操作入门</title>
+      <title>Git踩坑之路</title>
       <link>https://hubinbin91.github.io/post/web-git/</link>
       <pubDate>Mon, 16 Oct 2017 13:55:37 +0800</pubDate>
       
@@ -66,7 +48,7 @@
     </item>
     
     <item>
-      <title>Linux核心操作入门</title>
+      <title>Linux基础入门</title>
       <link>https://hubinbin91.github.io/post/web-linux/</link>
       <pubDate>Sun, 15 Oct 2017 13:35:42 +0800</pubDate>
       

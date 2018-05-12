@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Markdown preview</title>
-      <link>https://hubinbin91.github.io/post/even-preview/</link>
+      <title>Markdown语法总结</title>
+      <link>https://hubinbin91.github.io/post/markdown-preview/</link>
       <pubDate>Sun, 23 Aug 2015 18:03:09 +0800</pubDate>
       
-      <guid>https://hubinbin91.github.io/post/even-preview/</guid>
+      <guid>https://hubinbin91.github.io/post/markdown-preview/</guid>
       <description>Copy from 《Hugo 主题 Nuo 文章样式预览》 这篇文章集中说明主题所支持的 Markdown 语法和 Hugo Shortcodes 插件，你也可以在这里预览到他们的样子。如果你不喜欢某些样式，可以去</description>
     </item>
     

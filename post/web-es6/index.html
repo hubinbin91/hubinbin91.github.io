@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Web-ES6语法 - hubinbin&#39;s blog</title>
+  <title>《ES6》随手记 - hubinbin&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="hubinbin" />
-  <meta name="description" content="let const var关键字 let和const用于创建块级作用域 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用会" />
+  <meta name="description" content="let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用" />
 
   <meta name="keywords" content="Hugo, even" />
 
@@ -49,8 +49,8 @@
 
 
 
-<meta property="og:title" content="Web-ES6语法" />
-<meta property="og:description" content="let const var关键字 let和const用于创建块级作用域 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用会" />
+<meta property="og:title" content="《ES6》随手记" />
+<meta property="og:description" content="let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hubinbin91.github.io/post/web-es6/" />
 
@@ -70,20 +70,20 @@
 
 
 
-<meta itemprop="name" content="Web-ES6语法">
-<meta itemprop="description" content="let const var关键字 let和const用于创建块级作用域 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用会">
+<meta itemprop="name" content="《ES6》随手记">
+<meta itemprop="description" content="let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用">
 
 
 <meta itemprop="datePublished" content="2017-11-21T19:42:52&#43;08:00" />
 <meta itemprop="dateModified" content="2017-11-21T19:42:52&#43;08:00" />
-<meta itemprop="wordCount" content="3174">
+<meta itemprop="wordCount" content="3177">
 
 
 
 <meta itemprop="keywords" content="JavaScript,ES6," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Web-ES6语法"/>
-<meta name="twitter:description" content="let const var关键字 let和const用于创建块级作用域 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用会"/>
+<meta name="twitter:title" content="《ES6》随手记"/>
+<meta name="twitter:description" content="let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -147,7 +147,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Web-ES6语法</h1>
+      <h1 class="post-title">《ES6》随手记</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2017/11/21 </span>
@@ -216,14 +216,12 @@
 
 <p><code>let</code>和<code>const</code>用于创建块级作用域</p>
 
-<ol>
-<li>不存在变量提升
+<p><strong>1. 不存在变量提升</strong></p>
 
 <ul>
 <li><code>var</code> 在声明之前使用，值为<code>undefined</code></li>
 <li><code>let</code>和<code>const</code> 在声明之前使用会报错<code>ReferenceError</code></li>
-</ul></li>
-</ol>
+</ul>
 
 <pre><code class="language-js">if (true) {
   // TDZ开始
@@ -236,9 +234,7 @@
 }
 </code></pre>
 
-<ol>
-<li>存在暂时性死区</li>
-</ol>
+<p><strong>2. 存在暂时性死区</strong></p>
 
 <p>只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响</p>
 
@@ -250,18 +246,14 @@ if (true) {
 }
 </code></pre>
 
-<ol>
-<li>不允许重复声明</li>
-</ol>
+<p><strong>3. 不允许重复声明</strong></p>
 
 <ul>
 <li><code>var</code> 后一个覆盖前一个</li>
 <li><code>let</code>和<code>const</code> 再次声明会报错</li>
 </ul>
 
-<ol>
-<li>全局变量不再属于顶层变量</li>
-</ol>
+<p><strong>4. 全局变量不再属于顶层变量</strong></p>
 
 <p><code>var</code> 声明的全局变量属于<code>window</code>属性</p>
 
@@ -691,14 +683,14 @@ g.next(true) // { value: 0, done: false }
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/web-interview/">
+          <a class="prev" href="/post/web-other/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Web Interview</span>
+            <span class="prev-text nav-default">HTTP总结</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/web-js/">
-            <span class="next-text nav-default">Web-JavaScript知识点总结</span>
+          <a class="next" href="/post/web-git/">
+            <span class="next-text nav-default">Git踩坑之路</span>
             <span class="prev-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
