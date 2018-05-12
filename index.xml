@@ -32,6 +32,15 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>Vue入坑待之基本语法</title>
+      <link>https://hubinbin91.github.io/post/web-vue/</link>
+      <pubDate>Tue, 13 Mar 2018 19:42:52 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-vue/</guid>
+      <description>Vue实例 数据与方法 实例被创建时data中存在的属性才是响应式的 生命钩子 不要在选项属性和回调上使用箭头函数 模板语法 插值 &amp;lt;button v-bind:disabled=&amp;quot;isButton&amp;quot;&amp;gt;&amp;lt;/button&amp;gt; 当isButton</description>
+    </item>
+    
+    <item>
       <title>HTTP总结</title>
       <link>https://hubinbin91.github.io/post/web-other/</link>
       <pubDate>Sun, 25 Feb 2018 14:10:14 +0800</pubDate>
