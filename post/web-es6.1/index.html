@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>hubinbin&#39;s blog</title>
+  <title>《ES6》随手记之let const - hubinbin&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="hubinbin" />
-  <meta name="description" content="Hugo theme even example site." />
+  <meta name="description" content="let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用" />
+
   <meta name="keywords" content="Hugo, even" />
 
 
@@ -28,9 +29,7 @@
 <meta name="generator" content="Hugo 0.37.1" />
 
 
-<link rel="canonical" href="https://hubinbin91.github.io/" />
-<link href="https://hubinbin91.github.io/index.xml" rel="alternate" type="application/rss+xml" title="hubinbin&#39;s blog" />
-  <link href="https://hubinbin91.github.io/index.xml" rel="feed" type="application/rss+xml" title="hubinbin&#39;s blog" />
+<link rel="canonical" href="https://hubinbin91.github.io/post/web-es6.1/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -50,30 +49,41 @@
 
 
 
-<meta property="og:title" content="hubinbin&#39;s blog" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://hubinbin91.github.io/" />
+<meta property="og:title" content="《ES6》随手记之let const" />
+<meta property="og:description" content="let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hubinbin91.github.io/post/web-es6.1/" />
 
 
 
-<meta property="og:updated_time" content="2015-08-23T18:03:09&#43;08:00"/>
+<meta property="article:published_time" content="2017-12-21T19:42:52&#43;08:00"/>
 
-
-
-
-
-
+<meta property="article:modified_time" content="2017-12-21T19:42:52&#43;08:00"/>
 
 
 
 
-<meta itemprop="name" content="hubinbin&#39;s blog">
-<meta itemprop="description" content="Hugo theme even example site.">
 
+
+
+
+
+
+
+<meta itemprop="name" content="《ES6》随手记之let const">
+<meta itemprop="description" content="let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用">
+
+
+<meta itemprop="datePublished" content="2017-12-21T19:42:52&#43;08:00" />
+<meta itemprop="dateModified" content="2017-12-21T19:42:52&#43;08:00" />
+<meta itemprop="wordCount" content="333">
+
+
+
+<meta itemprop="keywords" content="JavaScript,ES6," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="hubinbin&#39;s blog"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta name="twitter:title" content="《ES6》随手记之let const"/>
+<meta name="twitter:description" content="let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -134,129 +144,138 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">《ES6》随手记之let const</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017/12/21 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#let-const-var关键字">let const var关键字</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h2 id="let-const-var关键字">let const var关键字</h2>
+
+<p><code>let</code>和<code>const</code>用于创建块级作用域</p>
+
+<p><strong>1. 不存在变量提升</strong></p>
+
+<ul>
+<li><code>var</code> 在声明之前使用，值为<code>undefined</code></li>
+<li><code>let</code>和<code>const</code> 在声明之前使用会报错<code>ReferenceError</code></li>
+</ul>
+
+<pre><code class="language-js">if (true) {
+  // TDZ开始
+  tmp = 'abc'; // ReferenceError
+  console.log(tmp); // ReferenceError
+  let tmp; // TDZ结束
+  console.log(tmp); // undefined
+  tmp = 123;
+  console.log(tmp); // 123
+}
+</code></pre>
+
+<p><strong>2. 存在暂时性死区</strong></p>
+
+<p>只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响</p>
+
+<pre><code class="language-js">var tmp = 123;
+
+if (true) {
+  tmp = 'abc'; // ReferenceError
+  let tmp;
+}
+</code></pre>
+
+<p><strong>3. 不允许重复声明</strong></p>
+
+<ul>
+<li><code>var</code> 后一个覆盖前一个</li>
+<li><code>let</code>和<code>const</code> 再次声明会报错</li>
+</ul>
+
+<p><strong>4. 全局变量不再属于顶层变量</strong></p>
+
+<p><code>var</code> 声明的全局变量属于<code>window</code>属性</p>
+
+<pre><code class="language-js">var d = 1;
+console.log(window.d); // 1
+let g = 1;
+console.log(window.g); // undefined
+</code></pre>
+
+<p><strong>let和const区别</strong></p>
+
+<ul>
+<li><p><code>let</code>可以先声明再赋值 <code>const</code>声明时必须赋值且为常量</p></li>
+
+<li><p>如果是基本类型，存放的就是就是这个变量的值。但如果是引用类型，存放的是它的地址</p></li>
+</ul>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
           
-  <section id="posts" class="posts">
-    
-    
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/markdown-preview/">Markdown语法总结</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015/08/23 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Copy from 《Hugo 主题 Nuo 文章样式预览》 这篇文章集中说明主题所支持的 Markdown 语法和 Hugo Shortcodes 插件，你也可以在这里预览到他们的样子。如果你不喜欢某些样式，可以去
-    </div>
-    <div class="read-more">
-      <a href="/post/markdown-preview/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
+          <a href="/tags/javascript/">JavaScript</a>
+          
+          <a href="/tags/es6/">ES6</a>
+          
+        </div>
 
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/web-other/">HTTP总结</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018/02/25 </span>
       
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      翻墙(安装xx-net) 下载安装包 设置IPv6 win7 全局PAC智能代理 申请appID(可能的话) xx-net1-160302|xx-net2-160302 TCP/IP TCP TCP/IP 协议分层模型 OSI七层协议模型、TCP/
-    </div>
-    <div class="read-more">
-      <a href="/post/web-other/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/web-es6.2/">《ES6》随手记之Promise和generator</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018/01/04 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Promise 1. Promise介绍 Promise是异步编程的一种解决方案，用来替代传统的回调方案。 所谓Promise，简单说就是一个容器，里面保存着某个
-    </div>
-    <div class="read-more">
-      <a href="/post/web-es6.2/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/web-es6.1/">《ES6》随手记之let const</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017/12/21 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用
-    </div>
-    <div class="read-more">
-      <a href="/post/web-es6.1/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/web-git/">Git踩坑之路</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017/10/16 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Git 教程 详见 《廖雪峰Git教程》 git和svn区别 详见 git和svn区别 绑定远程仓库 绑定远程仓库 $ git config --global user.name &quot;zhangsan&quot; $ git config --global user.email &quot;zhangsan@qq.com&quot; ssh key(rsa加密)
-    </div>
-    <div class="read-more">
-      <a href="/post/web-git/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    
-  </section>
-  
-  <nav class="pagination">
-    
-    
-      <a class="next" href="/page/2/">
-        <span class="next-text">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-  </nav>
-
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/web-es6.2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">《ES6》随手记之Promise和generator</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/web-git/">
+            <span class="next-text nav-default">Git踩坑之路</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+  
+
+  
 
       </div>
     </main>
