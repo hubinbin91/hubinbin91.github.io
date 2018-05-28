@@ -28,11 +28,12 @@
       <guid>https://hubinbin91.github.io/about/</guid>
       <description>Hugo is a static site engine written in Go.
 It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
+ Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.
+**</description>
     </item>
     
     <item>
-      <title>Vue入坑待之基本语法</title>
+      <title>Vue入坑之基本语法</title>
       <link>https://hubinbin91.github.io/post/web-vue/</link>
       <pubDate>Tue, 13 Mar 2018 19:42:52 +0800</pubDate>
       
