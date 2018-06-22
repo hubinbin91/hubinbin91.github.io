@@ -95,5 +95,14 @@ It makes use of a variety of open source projects including:
       <description>前言 hugo和hexo一样，是静态网站生成器，特点是基于Go语言编写，部署高效快速。 安装 下载对应操作系统版本的Hugo安装包: https://github.com/gohugoio/hugo/releases 解压缩或者安</description>
     </item>
     
+    <item>
+      <title>《ES6》随手记之ES模块化和类</title>
+      <link>https://hubinbin91.github.io/post/web-es6.3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-es6.3/</guid>
+      <description>ES Module ES6模块和CommonJS、AMD等模块 都是运行时确定 整体加载，然后再读取方法。运行时加载 ES6模块编译时加载 严格模式 ES6模块默认采</description>
+    </item>
+    
   </channel>
 </rss>

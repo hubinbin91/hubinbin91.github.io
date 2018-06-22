@@ -148,4 +148,10 @@
     <priority>0</priority>
   </url>
   
+  <url>
+    <loc>https://hubinbin91.github.io/post/web-es6.3/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>
