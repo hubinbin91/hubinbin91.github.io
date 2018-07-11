@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>《ES6》随手记之Promise和generator - hubinbin&#39;s blog</title>
+  <title>ES6总结之Promise - hubinbin&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -49,7 +49,7 @@
 
 
 
-<meta property="og:title" content="《ES6》随手记之Promise和generator" />
+<meta property="og:title" content="ES6总结之Promise" />
 <meta property="og:description" content="Promise 1. Promise介绍 Promise是异步编程的一种解决方案，用来替代传统的回调方案。 所谓Promise，简单说就是一个容器，里面保存着某个" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hubinbin91.github.io/post/web-es6.2/" />
@@ -70,19 +70,19 @@
 
 
 
-<meta itemprop="name" content="《ES6》随手记之Promise和generator">
+<meta itemprop="name" content="ES6总结之Promise">
 <meta itemprop="description" content="Promise 1. Promise介绍 Promise是异步编程的一种解决方案，用来替代传统的回调方案。 所谓Promise，简单说就是一个容器，里面保存着某个">
 
 
 <meta itemprop="datePublished" content="2018-01-04T19:42:52&#43;08:00" />
 <meta itemprop="dateModified" content="2018-01-04T19:42:52&#43;08:00" />
-<meta itemprop="wordCount" content="1917">
+<meta itemprop="wordCount" content="1493">
 
 
 
 <meta itemprop="keywords" content="JavaScript,ES6," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="《ES6》随手记之Promise和generator"/>
+<meta name="twitter:title" content="ES6总结之Promise"/>
 <meta name="twitter:description" content="Promise 1. Promise介绍 Promise是异步编程的一种解决方案，用来替代传统的回调方案。 所谓Promise，简单说就是一个容器，里面保存着某个"/>
 
 <!--[if lte IE 9]>
@@ -147,7 +147,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">《ES6》随手记之Promise和generator</h1>
+      <h1 class="post-title">ES6总结之Promise</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2018/01/04 </span>
@@ -176,11 +176,6 @@
 <li><a href="#5-resolve-函数参数类型为promise时">5. resolve()函数参数类型为Promise时</a></li>
 <li><a href="#6-then-返回一个promise实例">6. then()返回一个promise实例:</a></li>
 <li><a href="#7-promise状态透传">7. Promise状态透传</a></li>
-</ul></li>
-<li><a href="#generator">Generator</a>
-<ul>
-<li><a href="#概念">概念</a></li>
-<li><a href="#next给函数内变量传值">next给函数内变量传值</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -344,55 +339,6 @@ var step = function(gen, iterator){
 step(gen, iterator);
 </code></pre>
 
-<h2 id="generator">Generator</h2>
-
-<h3 id="概念">概念</h3>
-
-<p>generator函数和普通函数形式上无异，差别是：</p>
-
-<ul>
-<li>function关键字与函数名之间有一个星号</li>
-<li>函数体内部使用yield语句，定义不同的内部状态</li>
-<li>调用Generator函数后，该函数并不执行，返回的也不是函数运行结果，而是一个指向内部状态的指针对象</li>
-<li>我们可以通过调用 next 方法，使得内部指针移向下一个状态</li>
-</ul>
-
-<pre><code class="language-js">function* helloWorldGenerator() {
-  yield 'hello';
-  yield 'world';
-  return 'ending';
-}
-var hw = helloWorldGenerator();
-hw.next()
-// { value: 'hello', done: false }
-hw.next()
-// { value: 'world', done: false }
-hw.next()
-// { value: 'ending', done: true }
-hw.next()
-// { value: undefined, done: true }
-</code></pre>
-
-<h3 id="next给函数内变量传值">next给函数内变量传值</h3>
-
-<p>yield表达式本身没有返回值，或者说总是返回undefined。next方法可以带一个参数，该参数就会被当作上一个yield表达式的返回值</p>
-
-<p>通过next方法的参数，就有办法在 Generator 函数开始运行之后，继续向函数体内部注入值。也就是说，可以在 Generator 函数运行的不同阶段，从外部向内部注入不同的值，从而调整函数行为</p>
-
-<p>这个用处在其用来实现 async/await 至关重要</p>
-
-<pre><code class="language-js">function* f() {
-  for(var i = 0; true; i++) {
-    var reset = yield i;
-    if(reset) { i = -1; }
-  }
-}
-var g = f();
-g.next() // { value: 0, done: false }
-g.next() // { value: 1, done: false }
-g.next(true) // { value: 0, done: false }
-</code></pre>
-
     </div>
 
     
@@ -420,7 +366,7 @@ g.next(true) // { value: 0, done: false }
           </a>
         
           <a class="next" href="/post/web-es6.1/">
-            <span class="next-text nav-default">《ES6》随手记之let const</span>
+            <span class="next-text nav-default">ES6总结之let和const</span>
             <span class="prev-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

@@ -6,13 +6,31 @@
     <description>Recent content in ES6 on hubinbin&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jan 2018 19:42:52 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Jul 2018 15:44:34 +0800</lastBuildDate>
     
 	<atom:link href="https://hubinbin91.github.io/tags/es6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>《ES6》随手记之Promise和generator</title>
+      <title>ES6总结之async函数</title>
+      <link>https://hubinbin91.github.io/post/web-es6.5/</link>
+      <pubDate>Mon, 09 Jul 2018 15:44:34 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-es6.5/</guid>
+      <description>async函数定义 async函数的执行与普通函数一摸一样，只需要执行即可 调用async函数返回一个Promise对象。如果里面还有retur</description>
+    </item>
+    
+    <item>
+      <title>ES6总结之Generator</title>
+      <link>https://hubinbin91.github.io/post/web-es6.4/</link>
+      <pubDate>Fri, 15 Jun 2018 15:21:37 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-es6.4/</guid>
+      <description>Generator函数定义 function关键字与函数名之间有一个*号 函数体内部使用yield表达式，定义不同的内部状态 调用Generato</description>
+    </item>
+    
+    <item>
+      <title>ES6总结之Promise</title>
       <link>https://hubinbin91.github.io/post/web-es6.2/</link>
       <pubDate>Thu, 04 Jan 2018 19:42:52 +0800</pubDate>
       
@@ -21,7 +39,7 @@
     </item>
     
     <item>
-      <title>《ES6》随手记之let const</title>
+      <title>ES6总结之let和const</title>
       <link>https://hubinbin91.github.io/post/web-es6.1/</link>
       <pubDate>Thu, 21 Dec 2017 19:42:52 +0800</pubDate>
       
@@ -30,12 +48,12 @@
     </item>
     
     <item>
-      <title>《ES6》随手记之ES模块化和类</title>
+      <title>ES6总结之类和模块</title>
       <link>https://hubinbin91.github.io/post/web-es6.3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hubinbin91.github.io/post/web-es6.3/</guid>
-      <description>ES Module ES6模块和CommonJS、AMD等模块 都是运行时确定 整体加载，然后再读取方法。运行时加载 ES6模块编译时加载 严格模式 ES6模块默认采</description>
+      <description>ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; + this.x + &#39;, &#39; + this.y + &#39;)&#39; } } 注意事项： typeof Point // &amp;ldquo;function&amp;rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&amp;ldquo;constructor&amp;rdquo;,&amp;ldquo;toString&amp;rdquo;] 一个</description>
     </item>
     
   </channel>

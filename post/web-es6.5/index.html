@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>hubinbin&#39;s blog</title>
+  <title>ES6总结之async函数 - hubinbin&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="hubinbin" />
-  <meta name="description" content="Hugo theme even example site." />
+  <meta name="description" content="async函数定义 async函数的执行与普通函数一摸一样，只需要执行即可 调用async函数返回一个Promise对象。如果里面还有retur" />
+
   <meta name="keywords" content="Hugo, even" />
 
 
@@ -28,9 +29,7 @@
 <meta name="generator" content="Hugo 0.37.1" />
 
 
-<link rel="canonical" href="https://hubinbin91.github.io/" />
-<link href="https://hubinbin91.github.io/index.xml" rel="alternate" type="application/rss+xml" title="hubinbin&#39;s blog" />
-  <link href="https://hubinbin91.github.io/index.xml" rel="feed" type="application/rss+xml" title="hubinbin&#39;s blog" />
+<link rel="canonical" href="https://hubinbin91.github.io/post/web-es6.5/" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -50,30 +49,41 @@
 
 
 
-<meta property="og:title" content="hubinbin&#39;s blog" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://hubinbin91.github.io/" />
+<meta property="og:title" content="ES6总结之async函数" />
+<meta property="og:description" content="async函数定义 async函数的执行与普通函数一摸一样，只需要执行即可 调用async函数返回一个Promise对象。如果里面还有retur" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hubinbin91.github.io/post/web-es6.5/" />
 
 
 
-<meta property="og:updated_time" content="2018-02-25T14:10:14&#43;08:00"/>
+<meta property="article:published_time" content="2018-07-09T15:44:34&#43;08:00"/>
 
-
-
-
-
-
+<meta property="article:modified_time" content="2018-07-09T15:44:34&#43;08:00"/>
 
 
 
 
-<meta itemprop="name" content="hubinbin&#39;s blog">
-<meta itemprop="description" content="Hugo theme even example site.">
 
+
+
+
+
+
+
+<meta itemprop="name" content="ES6总结之async函数">
+<meta itemprop="description" content="async函数定义 async函数的执行与普通函数一摸一样，只需要执行即可 调用async函数返回一个Promise对象。如果里面还有retur">
+
+
+<meta itemprop="datePublished" content="2018-07-09T15:44:34&#43;08:00" />
+<meta itemprop="dateModified" content="2018-07-09T15:44:34&#43;08:00" />
+<meta itemprop="wordCount" content="330">
+
+
+
+<meta itemprop="keywords" content="JavaScript,ES6," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="hubinbin&#39;s blog"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta name="twitter:title" content="ES6总结之async函数"/>
+<meta name="twitter:description" content="async函数定义 async函数的执行与普通函数一摸一样，只需要执行即可 调用async函数返回一个Promise对象。如果里面还有retur"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -134,133 +144,128 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">ES6总结之async函数</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018/07/09 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#async函数定义">async函数定义</a></li>
+<li><a href="#await">await</a></li>
+<li><a href="#多异步操作触发">多异步操作触发</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h2 id="async函数定义">async函数定义</h2>
+
+<ol>
+<li><code>async</code>函数的执行与普通函数一摸一样，只需要执行即可</li>
+<li>调用<code>async</code>函数返回一个<code>Promise</code>对象。如果里面还有<code>return</code>语句返回值将作为<code>then</code>方法的参数</li>
+<li>必须等到<code>await</code>命令后面的<code>Promise</code>对象执行完，才会使得<code>async</code>返回的<code>Promise</code>对象的状态发生改变</li>
+</ol>
+
+<pre><code class="language-js">async function f() {
+  return 'hello world';
+}
+
+f().then(v =&gt; console.log(v))
+// &quot;hello world&quot;
+</code></pre>
+
+<h2 id="await">await</h2>
+
+<p><code>async</code>表示函数里面有异步操作和<code>Promise</code>类似相当于状态机，<code>await</code>表示紧跟在后面的表达式需要等待结果。</p>
+
+<p>对<code>await</code>后面的<code>Promise</code>进行异常捕获</p>
+
+<pre><code class="language-js">async function f() {
+  await Promise.reject('出错了')
+    .catch(e =&gt; console.log(e));
+  return await Promise.resolve('hello world');
+}
+</code></pre>
+
+<pre><code class="language-js">async function f() {
+  try {
+    await new Promise(function (resolve, reject) {
+      throw new Error('出错了');
+    });
+  } catch(e) {
+  }
+  return await('hello world');
+}
+</code></pre>
+
+<h2 id="多异步操作触发">多异步操作触发</h2>
+
+<p>如果多个<code>await</code>命令不存在继发关系，应该让它们同时触发</p>
+
+<pre><code class="language-js">let [foo, bar] = await Promise.all([getFoo(), getBar()])
+</code></pre>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
           
-  <section id="posts" class="posts">
-    
-    
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/web-other/">HTTP总结</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018/02/25 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      翻墙(安装xx-net) 下载安装包 设置IPv6 win7 全局PAC智能代理 申请appID(可能的话) xx-net1-160302|xx-net2-160302 TCP/IP TCP TCP/IP 协议分层模型 OSI七层协议模型、TCP/
-    </div>
-    <div class="read-more">
-      <a href="/post/web-other/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
+          <a href="/tags/javascript/">JavaScript</a>
+          
+          <a href="/tags/es6/">ES6</a>
+          
+        </div>
 
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/web-es6.2/">ES6总结之Promise</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018/01/04 </span>
       
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Promise 1. Promise介绍 Promise是异步编程的一种解决方案，用来替代传统的回调方案。 所谓Promise，简单说就是一个容器，里面保存着某个
-    </div>
-    <div class="read-more">
-      <a href="/post/web-es6.2/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/web-es6.1/">ES6总结之let和const</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017/12/21 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用
-    </div>
-    <div class="read-more">
-      <a href="/post/web-es6.1/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/web-git/">Git踩坑之路</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017/10/16 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Git 教程 详见 《廖雪峰Git教程》 git和svn区别 详见 git和svn区别 绑定远程仓库 绑定远程仓库 $ git config --global user.name &quot;zhangsan&quot; $ git config --global user.email &quot;zhangsan@qq.com&quot; ssh key(rsa加密)
-    </div>
-    <div class="read-more">
-      <a href="/post/web-git/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    
-      <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/web-linux/">Linux基础入门</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017/10/15 </span>
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      VMware 安装 序列号 -- 此处就不多说，但注意使用管理员权限运行安装 虚拟网络配置 桥接模式 (相对外部是真实的主机) nat模式√ (本地主机作为路由) Ubun
-    </div>
-    <div class="read-more">
-      <a href="/post/web-linux/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    
-  </section>
-  
-  <nav class="pagination">
-    
-      <a class="prev" href="/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">Prev</span>
-      </a>
-    
-      <a class="next" href="/page/3/">
-        <span class="next-text">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-  </nav>
-
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/markdown-preview/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Markdown语法总结</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/web-es6.4/">
+            <span class="next-text nav-default">ES6总结之Generator</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+  
+
+  
 
       </div>
     </main>

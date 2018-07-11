@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>《ES6》随手记之ES模块化和类 - hubinbin&#39;s blog</title>
+  <title>ES6总结之类和模块 - hubinbin&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="hubinbin" />
-  <meta name="description" content="ES Module ES6模块和CommonJS、AMD等模块 都是运行时确定 整体加载，然后再读取方法。运行时加载 ES6模块编译时加载 严格模式 ES6模块默认采" />
+  <meta name="description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： typeof Point // &amp;ldquo;function&amp;rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&amp;ldquo;constructor&amp;rdquo;,&amp;ldquo;toString&amp;rdquo;] 一个" />
 
   <meta name="keywords" content="Hugo, even" />
 
@@ -49,8 +49,8 @@
 
 
 
-<meta property="og:title" content="《ES6》随手记之ES模块化和类" />
-<meta property="og:description" content="ES Module ES6模块和CommonJS、AMD等模块 都是运行时确定 整体加载，然后再读取方法。运行时加载 ES6模块编译时加载 严格模式 ES6模块默认采" />
+<meta property="og:title" content="ES6总结之类和模块" />
+<meta property="og:description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： typeof Point // &ldquo;function&rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&ldquo;constructor&rdquo;,&ldquo;toString&rdquo;] 一个" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hubinbin91.github.io/post/web-es6.3/" />
 
@@ -69,19 +69,19 @@
 
 
 
-<meta itemprop="name" content="《ES6》随手记之ES模块化和类">
-<meta itemprop="description" content="ES Module ES6模块和CommonJS、AMD等模块 都是运行时确定 整体加载，然后再读取方法。运行时加载 ES6模块编译时加载 严格模式 ES6模块默认采">
+<meta itemprop="name" content="ES6总结之类和模块">
+<meta itemprop="description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： typeof Point // &ldquo;function&rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&ldquo;constructor&rdquo;,&ldquo;toString&rdquo;] 一个">
 
 
 
-<meta itemprop="wordCount" content="318">
+<meta itemprop="wordCount" content="326">
 
 
 
 <meta itemprop="keywords" content="JavaScript,ES6," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="《ES6》随手记之ES模块化和类"/>
-<meta name="twitter:description" content="ES Module ES6模块和CommonJS、AMD等模块 都是运行时确定 整体加载，然后再读取方法。运行时加载 ES6模块编译时加载 严格模式 ES6模块默认采"/>
+<meta name="twitter:title" content="ES6总结之类和模块"/>
+<meta name="twitter:description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： typeof Point // &ldquo;function&rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&ldquo;constructor&rdquo;,&ldquo;toString&rdquo;] 一个"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -145,7 +145,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">《ES6》随手记之ES模块化和类</h1>
+      <h1 class="post-title">ES6总结之类和模块</h1>
 
       <div class="post-meta">
         <span class="post-time"> 0001/01/01 </span>
@@ -165,6 +165,10 @@
 <ul>
 <li>
 <ul>
+<li><a href="#es6-类">ES6 类</a>
+<ul>
+<li><a href="#简介">简介</a></li>
+</ul></li>
 <li><a href="#es-module">ES Module</a>
 <ul>
 <li><a href="#es6模块和commonjs-amd等模块">ES6模块和CommonJS、AMD等模块</a></li>
@@ -172,10 +176,6 @@
 <li><a href="#import">import</a></li>
 <li><a href="#模块整体加载">模块整体加载</a></li>
 <li><a href="#export-default匿名输出">export default匿名输出</a></li>
-</ul></li>
-<li><a href="#es6-类">ES6 类</a>
-<ul>
-<li><a href="#简介">简介</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -186,28 +186,6 @@
     
     <div class="post-content">
       
-
-<h2 id="es-module">ES Module</h2>
-
-<h3 id="es6模块和commonjs-amd等模块">ES6模块和CommonJS、AMD等模块</h3>
-
-<ol>
-<li><p>都是运行时确定</p></li>
-
-<li><p>整体加载，然后再读取方法。运行时加载</p></li>
-
-<li><p>ES6模块编译时加载</p></li>
-</ol>
-
-<h3 id="严格模式">严格模式</h3>
-
-<p>ES6模块默认采用严格模式，模块内顶层<code>this</code>指向<code>undefined</code></p>
-
-<h3 id="import">import</h3>
-
-<h3 id="模块整体加载">模块整体加载</h3>
-
-<h3 id="export-default匿名输出">export default匿名输出</h3>
 
 <h2 id="es6-类">ES6 类</h2>
 
@@ -261,14 +239,36 @@
 <li><p>父类只能继承，不能被实例化</p></li>
 </ol>
 
-<p>```
-class Parent {
+<pre><code class="language-js">class Parent {
   constructor () {
     if (new.target === Parent) {
-      throw new Error(&lsquo;aa)
+      throw new Error('aa)
     }
   }
-}</p>
+}
+</code></pre>
+
+<h2 id="es-module">ES Module</h2>
+
+<h3 id="es6模块和commonjs-amd等模块">ES6模块和CommonJS、AMD等模块</h3>
+
+<ol>
+<li><p>都是运行时确定</p></li>
+
+<li><p>整体加载，然后再读取方法。运行时加载</p></li>
+
+<li><p>ES6模块编译时加载</p></li>
+</ol>
+
+<h3 id="严格模式">严格模式</h3>
+
+<p>ES6模块默认采用严格模式，模块内顶层<code>this</code>指向<code>undefined</code></p>
+
+<h3 id="import">import</h3>
+
+<h3 id="模块整体加载">模块整体加载</h3>
+
+<h3 id="export-default匿名输出">export default匿名输出</h3>
 
     </div>
 
