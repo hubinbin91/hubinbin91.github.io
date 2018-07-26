@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>入门级webpack配置</title>
+      <link>https://hubinbin91.github.io/post/web-webpack/</link>
+      <pubDate>Fri, 20 Jul 2018 13:51:08 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-webpack/</guid>
+      <description>webpack实质上是一个自动化的模块打包机。从入口文件js开始分析项目的依赖，将js 、CSS或者图片等类型的文件使用loader或插件进行</description>
+    </item>
+    
+    <item>
       <title>ES6总结之async函数</title>
       <link>https://hubinbin91.github.io/post/web-es6.5/</link>
       <pubDate>Mon, 09 Jul 2018 15:44:34 +0800</pubDate>
@@ -66,6 +75,15 @@
     </item>
     
     <item>
+      <title>ES6总结之类和模块</title>
+      <link>https://hubinbin91.github.io/post/web-es6.3/</link>
+      <pubDate>Wed, 21 Feb 2018 13:51:08 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-es6.3/</guid>
+      <description>ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; + this.x + &#39;, &#39; + this.y + &#39;)&#39; } } 注意事项： ES6 的类，完全可以看作构造</description>
+    </item>
+    
+    <item>
       <title>ES6总结之Promise</title>
       <link>https://hubinbin91.github.io/post/web-es6.2/</link>
       <pubDate>Thu, 04 Jan 2018 19:42:52 +0800</pubDate>
@@ -108,15 +126,6 @@
       
       <guid>https://hubinbin91.github.io/post/web-hugo/</guid>
       <description>前言 hugo和hexo一样，是静态网站生成器，特点是基于Go语言编写，部署高效快速。 安装 下载对应操作系统版本的Hugo安装包: https://github.com/gohugoio/hugo/releases 解压缩或者安</description>
-    </item>
-    
-    <item>
-      <title>ES6总结之类和模块</title>
-      <link>https://hubinbin91.github.io/post/web-es6.3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hubinbin91.github.io/post/web-es6.3/</guid>
-      <description>ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; + this.x + &#39;, &#39; + this.y + &#39;)&#39; } } 注意事项： typeof Point // &amp;ldquo;function&amp;rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&amp;ldquo;constructor&amp;rdquo;,&amp;ldquo;toString&amp;rdquo;] 一个</description>
     </item>
     
   </channel>

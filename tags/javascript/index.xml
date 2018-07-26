@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>ES6总结之类和模块</title>
+      <link>https://hubinbin91.github.io/post/web-es6.3/</link>
+      <pubDate>Wed, 21 Feb 2018 13:51:08 +0800</pubDate>
+      
+      <guid>https://hubinbin91.github.io/post/web-es6.3/</guid>
+      <description>ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; + this.x + &#39;, &#39; + this.y + &#39;)&#39; } } 注意事项： ES6 的类，完全可以看作构造</description>
+    </item>
+    
+    <item>
       <title>ES6总结之Promise</title>
       <link>https://hubinbin91.github.io/post/web-es6.2/</link>
       <pubDate>Thu, 04 Jan 2018 19:42:52 +0800</pubDate>
@@ -45,15 +54,6 @@
       
       <guid>https://hubinbin91.github.io/post/web-es6.1/</guid>
       <description>let const var关键字 let和const用于创建块级作用域 1. 不存在变量提升 var 在声明之前使用，值为undefined let和const 在声明之前使用</description>
-    </item>
-    
-    <item>
-      <title>ES6总结之类和模块</title>
-      <link>https://hubinbin91.github.io/post/web-es6.3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hubinbin91.github.io/post/web-es6.3/</guid>
-      <description>ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; + this.x + &#39;, &#39; + this.y + &#39;)&#39; } } 注意事项： typeof Point // &amp;ldquo;function&amp;rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&amp;ldquo;constructor&amp;rdquo;,&amp;ldquo;toString&amp;rdquo;] 一个</description>
     </item>
     
   </channel>

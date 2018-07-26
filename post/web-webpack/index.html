@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>入门级webpack配置 - hubinbin&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="hubinbin" />
+  <meta name="description" content="webpack实质上是一个自动化的模块打包机。从入口文件js开始分析项目的依赖，将js 、CSS或者图片等类型的文件使用loader或插件进行" />
+
+  <meta name="keywords" content="Hugo, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.37.1" />
+
+
+<link rel="canonical" href="https://hubinbin91.github.io/post/web-webpack/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.1.1" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="入门级webpack配置" />
+<meta property="og:description" content="webpack实质上是一个自动化的模块打包机。从入口文件js开始分析项目的依赖，将js 、CSS或者图片等类型的文件使用loader或插件进行" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hubinbin91.github.io/post/web-webpack/" />
+
+
+
+<meta property="article:published_time" content="2018-07-20T13:51:08&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-07-20T13:51:08&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="入门级webpack配置">
+<meta itemprop="description" content="webpack实质上是一个自动化的模块打包机。从入口文件js开始分析项目的依赖，将js 、CSS或者图片等类型的文件使用loader或插件进行">
+
+
+<meta itemprop="datePublished" content="2018-07-20T13:51:08&#43;08:00" />
+<meta itemprop="dateModified" content="2018-07-20T13:51:08&#43;08:00" />
+<meta itemprop="wordCount" content="1508">
+
+
+
+<meta itemprop="keywords" content="Webpack," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="入门级webpack配置"/>
+<meta name="twitter:description" content="webpack实质上是一个自动化的模块打包机。从入口文件js开始分析项目的依赖，将js 、CSS或者图片等类型的文件使用loader或插件进行"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">binbin</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  
+  <img src="/img/logo-59x59.png" alt="hu" class="logo">
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">入门级webpack配置</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018/07/20 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#与gulp-grunt对比">与Gulp/Grunt对比</a></li>
+<li><a href="#最简单的webpack使用">最简单的webpack使用</a></li>
+<li><a href="#webpack核心概念">webpack核心概念</a></li>
+<li><a href="#html-webpack-pugin-插件">html-webpack-pugin 插件</a></li>
+<li><a href="#webpack-dev-server">webpack-dev-server</a></li>
+<li><a href="#热加载hmr">热加载HMR</a>
+<ul>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<blockquote>
+<p>webpack实质上是一个自动化的模块打包机。从入口文件js开始分析项目的依赖，将js 、CSS或者图片等类型的文件使用loader或插件进行处理，打包成一个或多个合适的文件。</p>
+</blockquote>
+
+<h2 id="与gulp-grunt对比">与Gulp/Grunt对比</h2>
+
+<p>Grunt和Gulp的工作方式是：在一个配置文件中，指明对某些文件进行类似编译，组合，压缩等任务的具体步骤，工具之后可以自动替你完成这些任务</p>
+
+<p>webpack的工作方式是：把你的项目依赖最后打包为一个（或多个）浏览器可识别的JavaScript文件</p>
+
+<h2 id="最简单的webpack使用">最简单的webpack使用</h2>
+
+<ol>
+<li>初始化webpack项目</li>
+</ol>
+
+<pre><code class="language-bash">mkdir demo &amp;&amp; cd demo
+## package.json初始化
+npm init
+## 安装webpack到本地开发环境
+npm install -save--dev webpack
+</code></pre>
+
+<ol>
+<li>命令行运行</li>
+</ol>
+
+<pre><code class="language-bash">./node_modules/.bin/webpack src/index.js dist/bundle.js
+              ↓                  ↓             ↓
+           打包指令            入口文件      输出文件
+全局安装webpack时：
+webpack src/index.js dist/bundle.js
+</code></pre>
+
+<p>命令后面还可以加以下参数：</p>
+
+<ul>
+<li><code>--watch</code> 实时打包</li>
+<li><code>--process</code> 显示打包进度</li>
+<li><code>--display-modules</code> 显示打包的模块</li>
+<li><code>--display-reasons</code> 显示模块包含在输出中的原因</li>
+</ul>
+
+<ol>
+<li>webpack.config配置文件</li>
+</ol>
+
+<p>也可以使用webpack.config配置文件代替指定入口文件和输出文件</p>
+
+<pre><code class="language-js">const path = require('path')
+
+module.exports = {
+  entry: './src/index.js',  // 入口文件
+  output: {
+    filename: 'bundle.js',  // 输出文件名
+    path: path.resolve(__dirname, 'dist') // 输出地址
+  }
+}
+</code></pre>
+
+<p>可以通过配置<code>package.json</code>文件中的<code>scripts</code>属性，来自定义脚本</p>
+
+<pre><code class="language-json">scripts: {
+  &quot;build&quot;: &quot;webpack --config webpack.config.js&quot;
+}
+</code></pre>
+
+<ol>
+<li>引用打包后的文件</li>
+</ol>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;webpackTest&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script src=&quot;./bundle.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2 id="webpack核心概念">webpack核心概念</h2>
+
+<ul>
+<li>entry 入口： 指示<code>webpack</code>应该使用哪个模块，来作为构建其内部依赖图的开始</li>
+<li>output 输出： 告诉<code>webpack</code>在哪里输出它所创建的<code>bundles</code>，以及如何命名这些文件</li>
+<li>loaders： 将其他类型文件转换成webpack识别的类型
+使用时，先install相应的loader，然后再module-&gt;rules数组中进行配置</li>
+</ul>
+
+<p><strong>打包css</strong></p>
+
+<pre><code class="language-js">module: {
+  rules: [{
+    test: /\.css$/,                                         // 识别需要处理的类型
+    use: [{loader: 'style-loader'}, {loader: 'css-loader'}] // 使用loader去转换
+  }]
+}
+</code></pre>
+
+<p><strong>打包图片</strong></p>
+
+<pre><code class="language-bash">npm install --save-dev file-loader
+</code></pre>
+
+<ul>
+<li>plugins 插件： 提供其他方面的支持
+使用插件时，需先要<code>require()</code>它，然后把它添加到<code>Plugins</code>数组中。也可以在一个配置文件中因为不同目的而多次使用同一个插件，这时需要通过使用<code>new</code>创建实例
+``` js
+const HtmlWebpackPlugin = require(&lsquo;html-webpack-plugin&rsquo;)
+const path = require(&lsquo;path&rsquo;)</li>
+</ul>
+
+<p>const config = {
+  entry: &lsquo;./main.js&rsquo;,
+  output: {
+    path: path.resolve(__dirname,&lsquo;dist&rsquo;),
+    filename: &lsquo;bundle.js&rsquo;
+  },
+  module: {
+    rules:[
+      {
+        test: /.css$/,
+        use: [
+          { loader: &lsquo;style-loader&rsquo; },
+          { loader: &lsquo;css-loader&rsquo; }
+        ]
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({ template: &lsquo;./index.html&rsquo; })
+  ]
+}</p>
+
+<p>module.exports = config</p>
+
+<pre><code>
+## 多入口设置
+
+我们一般是打包成一个`bundle.js`文件，但如果代码越来越复杂，就需要打包成多个文件，在`index.html`里面去引用。不多说，直接上代码：
+
+``` js
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
+
+const config = {
+  entry: {
+    component1: './main1.js',
+    component2: './main2.js',
+  },
+  output: {
+    path: path.resolve(__dirname,'dist'),
+    filename: '[name].bundle.js'
+  },
+  module: {
+    rules: [
+      { test: /\.css$/, loader: 'style-loader!css-loader' }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({ template: './index.html' })
+  ]
+}
+
+module.exports = config
+</code></pre>
+
+<p>输出文件名中的[name]表示entry里面指定的名称，最终生成：<code>component1.bundle.js</code>和<code>component2.bundle.js</code>。</p>
+
+<h2 id="html-webpack-pugin-插件">html-webpack-pugin 插件</h2>
+
+<p><code>html-webpack-pugin</code>主要解决html文件中需要手动插入或修改打包后的文件问题。</p>
+
+<p>上面运行完<code>webpack</code>命令后，生成的<code>index.html</code>文件新引入<code>component2</code>后引入<code>component1</code></p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;title&gt;first_webpack_demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;component2.bundle.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;component1.bundle.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+<figure class="center">
+    
+        <img src="/img/webpack/1-1.png" />
+    
+    
+    <figcaption>
+        <h4>html-webpack-plugin 中的参数</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h2 id="webpack-dev-server">webpack-dev-server</h2>
+
+<p><code>webpack-dev-server</code>可以帮你在代码发生改变的时候自动打包</p>
+
+<pre><code class="language-js">devServer: {
+  contentBase: path.resolve(__dirname, 'dist'),
+  host: 'localhost',
+  port: 8080,
+}
+</code></pre>
+
+<pre><code class="language-json">&quot;scripts&quot;: {
+  &quot;dev&quot;: &quot;webpack-dev-server --config webpack.dev.js&quot;
+}
+</code></pre>
+
+<h2 id="热加载hmr">热加载HMR</h2>
+
+<p>HRM能够让应用运行的时候替换、增加或删除模块，而无需进行完全的重载</p>
+
+<pre><code class="language-js">devServer: {
+  contentBase: path.resolve(__dirname, 'dist'),
+  hot: true, // 告诉 dev-server 使用 HMR
+  hotOnly: true // 如果热加载失败了禁止刷新页面，可以分析失败原因
+  host: 'localhost',
+  port: 8080,
+},
+plugins: [
+  new webpack.HotModuleReplacementPlugin()
+]
+</code></pre>
+
+<p><code>[HMR] Waiting for update signal from WDS...</code>说明启用<code>HMR</code>成功</p>
+
+<p>热加载<code>HMR</code>和<code>webpack-dev-server</code>的区别是，<code>webpack-dev-server</code>编译更新之后，直接重新刷新页面，而<code>HMR</code>则是尝试先替换掉相关的模块，不使页面刷新。</p>
+
+<h3 id="参考">参考</h3>
+
+<blockquote>
+<p><a href="https://cnodejs.org/topic/5a41ede98230827a18293a8c">多入口设置与 html-webpack-pugin 插件详解</a>
+<a href="http://luckyabby.com/posts/%E5%88%9D%E7%BA%A7webpack%E9%85%8D%E7%BD%AE%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%BC%83%E5%9D%91%E4%B9%8B%E8%B7%AF/">初级webpack配置工程师的弃坑之路</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/webpack/">Webpack</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/markdown-preview/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Markdown语法总结</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/web-es6.5/">
+            <span class="next-text nav-default">ES6总结之async函数</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:hu_binbin@outlook.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.twitter.com/hubinbin91" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/hubinbin91" class="iconfont icon-github" title="github"></a>
+      <a href="https://weibo.com/hubinbin91" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://hubinbin91.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2015 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">hubinbin</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/even.min.js?v=3.1.1"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

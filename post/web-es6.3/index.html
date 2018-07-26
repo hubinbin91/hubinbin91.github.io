@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="hubinbin" />
-  <meta name="description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： typeof Point // &amp;ldquo;function&amp;rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&amp;ldquo;constructor&amp;rdquo;,&amp;ldquo;toString&amp;rdquo;] 一个" />
+  <meta name="description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： ES6 的类，完全可以看作构造" />
 
   <meta name="keywords" content="Hugo, even" />
 
@@ -50,14 +50,15 @@
 
 
 <meta property="og:title" content="ES6总结之类和模块" />
-<meta property="og:description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： typeof Point // &ldquo;function&rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&ldquo;constructor&rdquo;,&ldquo;toString&rdquo;] 一个" />
+<meta property="og:description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： ES6 的类，完全可以看作构造" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hubinbin91.github.io/post/web-es6.3/" />
 
 
 
+<meta property="article:published_time" content="2018-02-21T13:51:08&#43;08:00"/>
 
-
+<meta property="article:modified_time" content="2018-02-21T13:51:08&#43;08:00"/>
 
 
 
@@ -70,18 +71,19 @@
 
 
 <meta itemprop="name" content="ES6总结之类和模块">
-<meta itemprop="description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： typeof Point // &ldquo;function&rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&ldquo;constructor&rdquo;,&ldquo;toString&rdquo;] 一个">
+<meta itemprop="description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： ES6 的类，完全可以看作构造">
 
 
-
-<meta itemprop="wordCount" content="326">
+<meta itemprop="datePublished" content="2018-02-21T13:51:08&#43;08:00" />
+<meta itemprop="dateModified" content="2018-02-21T13:51:08&#43;08:00" />
+<meta itemprop="wordCount" content="374">
 
 
 
 <meta itemprop="keywords" content="JavaScript,ES6," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ES6总结之类和模块"/>
-<meta name="twitter:description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： typeof Point // &ldquo;function&rdquo; Object.keys(Point.prototype) // [] Object.getOwnPropertyNames(Point.prototype) // [&ldquo;constructor&rdquo;,&ldquo;toString&rdquo;] 一个"/>
+<meta name="twitter:description" content="ES6 类 简介 和Java定义类相类似 class Point { // 构造函数 constructor (x,y) { this.x = x this.y = y } // 类方法 toString () { return &#39;(&#39; &#43; this.x &#43; &#39;, &#39; &#43; this.y &#43; &#39;)&#39; } } 注意事项： ES6 的类，完全可以看作构造"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -148,7 +150,7 @@
       <h1 class="post-title">ES6总结之类和模块</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 0001/01/01 </span>
+        <span class="post-time"> 2018/02/21 </span>
         
         
         
@@ -209,14 +211,23 @@
 <p>注意事项：</p>
 
 <ol>
-<li><p>typeof Point // &ldquo;function&rdquo;</p></li>
+<li>ES6 的类，完全可以看作构造函数的另一种写法</li>
+</ol>
 
-<li><p>Object.keys(Point.prototype)
-// []</p></li>
+<pre><code class="language-js">typeof Point // &quot;function&quot;
+</code></pre>
 
-<li><p>Object.getOwnPropertyNames(Point.prototype)
-// [&ldquo;constructor&rdquo;,&ldquo;toString&rdquo;]</p></li>
+<ol>
+<li>类的内部所有定义的方法，都是不可枚举的</li>
+</ol>
 
+<pre><code class="language-js">Object.keys(Point.prototype)
+// []
+Object.getOwnPropertyNames(Point.prototype)
+// [&quot;constructor&quot;,&quot;toString&quot;]
+</code></pre>
+
+<ol>
 <li><p>一个类必须有constructor方法</p></li>
 
 <li><p>类方法调用必须要使用new</p></li>
@@ -290,12 +301,17 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/web-hugo/">
+          <a class="prev" href="/post/web-other/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">基于Hugo搭建个人Blog</span>
+            <span class="prev-text nav-default">HTTP总结</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
+          <a class="next" href="/post/web-es6.2/">
+            <span class="next-text nav-default">ES6总结之Promise</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
       </nav>
     </footer>
   </article>
